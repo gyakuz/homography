@@ -18,19 +18,21 @@ from torch.utils.data import (
     RandomSampler,
     dataloader
 )
+import sys
+sys.path.append('/data/zjy/homography/model')
 
 from homodataset.HomoDataset import HomoDataset
-from model.loftr_src.utils.misc import tqdm_joblib
-from model.loftr_src.utils import comm
-from model.loftr_src.datasets.megadepth import MegaDepthDataset
-from model.loftr_src.datasets.scannet import ScanNetDataset
-from model.loftr_src.datasets.sampler import RandomConcatSampler
+from loftr_src.utils.misc import tqdm_joblib
+from loftr_src.utils import comm
+from loftr_src.datasets.megadepth import MegaDepthDataset
+from loftr_src.datasets.scannet import ScanNetDataset
+from loftr_src.datasets.sampler import RandomConcatSampler
 
-from model.loftr_src.utils.augment import build_augmentor
+from loftr_src.utils.augment import build_augmentor
 
-from model.loftr_src.utils.dataloader import get_local_split
+from loftr_src.utils.dataloader import get_local_split
 
-
+sys.path.append('/data/zjy/homography')
 class MultiSceneDataModule(pl.LightningDataModule):
     """ 
     For distributed training, each training process is assgined

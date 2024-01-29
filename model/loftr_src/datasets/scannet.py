@@ -6,8 +6,9 @@ import numpy as np
 import torch
 import torch.utils as utils
 from numpy.linalg import inv
-
-from model.loftr_src.utils.dataset import (
+import sys
+sys.path.append('/data/zjy/homography/model')
+from loftr_src.utils.dataset import (
     read_scannet_gray,
     read_scannet_depth,
     read_scannet_pose,

@@ -1,9 +1,9 @@
 import math
 import os
 import sys
-
+sys.path.append("/data/zjy/homography/model")
 from lightning_depth_geoformer import PL_GeoFormer
-from model.loftr_src.config.default import get_cfg_defaults
+from loftr_src.config.default import get_cfg_defaults
 import argparse
 import pprint
 from distutils.util import strtobool

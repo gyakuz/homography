@@ -1,18 +1,23 @@
+import collections
+
 import pytorch_lightning as pl
 import torch
+import math
 from loguru import logger
+import sys
+from torch.optim.lr_scheduler import LambdaLR
+sys.path.append("/data/zjy/homography/model")
+from full_model import GeoFormer
 
-from model.full_model import GeoFormer
-from model.loftr_src.loftr.utils.supervision import compute_supervision_coarse, compute_supervision_fine
-from model.loftr_src.losses.loftr_loss import LoFTRLoss, GeoLoss
-from model.loftr_src.optimizers import build_optimizer, build_scheduler
-from model.loftr_src.utils.metrics import (
+from loftr_src.loftr.utils.supervision import compute_supervision_coarse, compute_supervision_fine
+from loftr_src.losses.loftr_loss import LoFTRLoss, GeoLoss
+from loftr_src.optimizers import build_optimizer, build_scheduler
+from loftr_src.utils.metrics import (
     compute_symmetrical_epipolar_errors
 )
-from model.loftr_src.utils.misc import lower_config
-from model.loftr_src.utils.plotting import make_matching_figures
-from model.loftr_src.utils.profiler import PassThroughProfiler
-
+from loftr_src.utils.misc import lower_config
+from loftr_src.utils.plotting import make_matching_figures
+from loftr_src.utils.profiler import PassThroughProfiler
 
 class PL_H_GeoFormer(pl.LightningModule):
     def __init__(self, config, pretrained_ckpt=None, profiler=None, dump_dir=None):
@@ -84,7 +89,7 @@ class PL_H_GeoFormer(pl.LightningModule):
         if batch_idx % 100 == 0:
             dt = {'state_dict': self.matcher.state_dict()}
             if self.global_rank == 0:
-                torch.save(dt, f'/data3/ljz/matching/tmp_save/tmp{batch_idx}.ckpt')
+                torch.save(dt, f'/data/zjy/homography/tmp_save/tmp{batch_idx}.ckpt')
 
         # logging
         if self.trainer.global_rank == 0 and self.global_step % self.trainer.log_every_n_steps == 0:

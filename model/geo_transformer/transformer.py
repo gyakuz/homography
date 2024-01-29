@@ -2,8 +2,8 @@ import copy
 import torch
 import torch.nn as nn
 
-from utils.common_utils import sample_descriptors
-from model.geo_transformer.geo_attention import LinearAttention, FullAttention
+#from utils.common_utils import sample_descriptors
+from .geo_attention import LinearAttention, FullAttention
 
 
 class LoFTREncoderLayer(nn.Module):

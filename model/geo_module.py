@@ -2,12 +2,14 @@ import torch
 import torch.nn as nn
 from einops import rearrange
 
-from model.geo_transformer.transformer import GeoTransformer
+from geo_transformer.transformer import GeoTransformer
 import cv2
 
-from model.loftr_src.loftr.utils.position_encoding import PositionEncodingSine
-from utils.common_utils import get_map_keypoints, generate_window
-from utils.homography import warp_points_batch
+from loftr_src.loftr.utils.position_encoding import PositionEncodingSine
+import sys
+sys.path.append("/data/zjy/homography/utils")
+from common_utils import get_map_keypoints, generate_window
+from homography import warp_points_batch
 
 
 class GeoModule(nn.Module):
@@ -20,7 +22,7 @@ class GeoModule(nn.Module):
         self.des_transformer = GeoTransformer(config, config['layer_names'], d_model,
                                               linear=False)
 
-    def apply_RANSAC(self, desc_map0, desc_map1, kps0, kps1, data):
+    def apply_RANSAC(self, desc_map0, desc_map1, kps0, kps1, data, window_size):
 
         bs, cc, hh0, ww0 = desc_map0.shape
         bs, cc, hh1, ww1 = desc_map1.shape
@@ -57,7 +59,7 @@ class GeoModule(nn.Module):
                     warp_points_batch(keypoints.unsqueeze(0),
                                       homographies=torch.from_numpy(M).unsqueeze(0).to(desc_map0))[0]
                 kp_windows_list1, masks_list1 = generate_window([keypoints1], (H1, W1),
-                                                                window_size=self.window_size, scale=scale1)
+                                                                window_size, scale=scale1)
 
 
                 keypoints = get_map_keypoints(H1, W1, scale).to(desc_map0.device)
@@ -67,7 +69,7 @@ class GeoModule(nn.Module):
                                       homographies=torch.inverse(torch.from_numpy(M).unsqueeze(0)).to(desc_map0))[0]
 
                 kp_windows_list0, masks_list0 = generate_window([keypoints0], (H0, W0),
-                                                                window_size=self.window_size, scale=scale0)
+                                                                window_size, scale=scale0)
 
                 kp_cross_list0.extend(kp_windows_list0)
                 kp_cross_list1.extend(kp_windows_list1)
@@ -104,13 +106,13 @@ class GeoModule(nn.Module):
 
         return desc_map0_o, desc_map1_o
 
-    def forward(self, cnn_desc0, cnn_desc1, batch):
+    def forward(self, cnn_desc0, cnn_desc1, batch, window_size):
         mkpt0_c, mkpt1_c, m_bid = batch['mkpts0_c'],  batch['mkpts1_c'], batch['m_bids']
         bs = batch['image0'].shape[0]
         kpts0 = [mkpt0_c[m_bid == b].long() for b in range(bs)]
         kpts1 = [mkpt1_c[m_bid == b].long() for b in range(bs)]
 
-        desc_map0_o, desc_map1_o = self.apply_RANSAC(cnn_desc0, cnn_desc1, kpts0, kpts1, batch)
+        desc_map0_o, desc_map1_o = self.apply_RANSAC(cnn_desc0, cnn_desc1, kpts0, kpts1, batch, window_size)
 
         desc_map0, desc_map1 = desc_map0_o, desc_map1_o
         return desc_map0, desc_map1

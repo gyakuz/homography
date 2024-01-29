@@ -6,8 +6,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 from kornia.geometry.subpix import dsnt
 from kornia.utils.grid import create_meshgrid
-
-from utils.common_utils import arange_like
+import sys
+sys.path.append("/data/zjy/homography/utils")
+from common_utils import arange_like
 
 
 class FineMatching2(nn.Module):
@@ -249,3 +250,4 @@ class FineMatching2(nn.Module):
             'scores': scores,
         }
         return result
+

@@ -1,9 +1,10 @@
 import math
 import os
 import sys
-
+sys.path.append("/data/zjy/homography/model")
 from lightning_homo_geoformer import PL_H_GeoFormer
-from model.loftr_src.config.default import get_cfg_defaults
+# from lightning_homo_casgeoformer import PL_H_Cas_GeoFormer
+from loftr_src.config.default import get_cfg_defaults
 import argparse
 import pprint
 from distutils.util import strtobool
@@ -15,11 +16,11 @@ from pytorch_lightning.utilities import rank_zero_only
 from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.callbacks import ModelCheckpoint, LearningRateMonitor
 from pytorch_lightning.plugins import DDPPlugin
-
-from model.loftr_src.lightning.data import HomoDataModule
+# from pytorch_lightning.plugins.ddp import DistributedDataParallelPlugin
+from loftr_src.lightning.data import HomoDataModule
 # from data_depth import MultiSceneDataModule
-from model.loftr_src.utils.misc import get_rank_zero_only_logger, setup_gpus
-from model.loftr_src.utils.profiler import build_profiler
+from loftr_src.utils.misc import get_rank_zero_only_logger, setup_gpus
+from loftr_src.utils.profiler import build_profiler
 
 loguru_logger = get_rank_zero_only_logger(loguru_logger)
 
@@ -29,11 +30,11 @@ def parse_args():
     # check documentation: https://pytorch-lightning.readthedocs.io/en/latest/common/trainer.html#trainer-flags
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument(
-        '--data_cfg_path', type=str, help='data loftr_config path', default='../train_config/homo_trainval_640.py')
+        '--data_cfg_path', type=str, help='data loftr_config path', default='/data/zjy/homography/train_config/homo_trainval_640.py')
     parser.add_argument(
-        '--loftr_cfg_path', type=str, help='loftr loftr_config path', default='../train_config/loftr_ds_dense.py')
+        '--loftr_cfg_path', type=str, help='loftr loftr_config path', default='/data/zjy/homography/train_config/loftr_ds_dense.py')
     parser.add_argument(
-        '--exp_name', type=str, default='default_exp_name')
+        '--exp_name', type=str, default='GeoFormer')
     parser.add_argument(
         '--batch_size', type=int, default=1, help='batch_size per gpu')
     parser.add_argument(
@@ -51,8 +52,13 @@ def parse_args():
         '--profiler_name', type=str, default=None,
         help='options: [inference, pytorch], or leave it unset')
     parser.add_argument(
+        '--reset_lr', action='store_true')
+    parser.add_argument(
         '--parallel_load_data', action='store_true',
         help='load datasets in with multiple processes.')
+    parser.add_argument(
+        '--training_stage', type=int, default=1, help='stage1:8epoch, stage2,stage3:25epoch')
+
 
     parser = pl.Trainer.add_argparse_args(parser)
     return parser.parse_args()
@@ -61,10 +67,10 @@ def parse_args():
 def main():
     import os
     # parse arguments
-    os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3,4,5,6,7"
+    os.environ["CUDA_VISIBLE_DEVICES"] = "1,2,3,4,5"
     args = parse_args()
     args.num_nodes = 1
-    args.gpus = 8
+    args.gpus = 5
     rank_zero_only(pprint.pprint)(vars(args))
 
     # init default-cfg and merge it with the main- and data-cfg
@@ -85,12 +91,13 @@ def main():
     default_config.TRAINER.TRUE_LR = default_config.TRAINER.CANONICAL_LR * _scaling
     default_config.TRAINER.WARMUP_STEP = math.floor(default_config.TRAINER.WARMUP_STEP / _scaling)
     # lightning module
+    # profiler = build_profiler(args.profiler_name)
+
+    # lightning module
     profiler = build_profiler(args.profiler_name)
 
-    model = PL_H_GeoFormer(default_config,
-                         profiler=profiler)
-
-
+    model = PL_H_GeoFormer(default_config, pretrained_ckpt = args.ckpt_path,
+                               profiler=profiler)
     loguru_logger.info(f"LightningModule initialized!")
 
     # lightning data
@@ -100,7 +107,7 @@ def main():
     # TensorBoard Logger
     logger = TensorBoardLogger(save_dir='logs/tb_logs', name=args.exp_name, default_hp_metric=False)
     ckpt_dir = Path(logger.log_dir) / 'checkpoints'
-    print(ckpt_dir)
+    # print(ckpt_dir)
 
     # Callbacks
     # TODO: update ModelCheckpoint to monitor multiple metrics
@@ -116,15 +123,18 @@ def main():
     # Lightning MyTrainer
     trainer = pl.Trainer.from_argparse_args(
         args,
-        plugins=DDPPlugin(find_unused_parameters=True,
-                          num_nodes=args.num_nodes,
-                          sync_batchnorm=default_config.TRAINER.WORLD_SIZE > 0),
+        # plugins=DDPPlugin(find_unused_parameters=True,
+        #                   num_nodes=args.num_nodes,
+        #                   sync_batchnorm=default_config.TRAINER.WORLD_SIZE > 0),
+        plugins=DDPPlugin(find_unused_parameters=True),
         gradient_clip_val=default_config.TRAINER.GRADIENT_CLIPPING,
         callbacks=callbacks,
         logger=logger,
         sync_batchnorm=default_config.TRAINER.WORLD_SIZE > 0,
         weights_summary='full',
-        profiler=profiler)
+        profiler=profiler,
+        max_epochs=20
+        )
     loguru_logger.info(f"Trainer initialized!")
     loguru_logger.info(f"Start training!")
     trainer.fit(model, datamodule=data_module)

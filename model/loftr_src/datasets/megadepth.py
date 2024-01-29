@@ -4,8 +4,9 @@ import torch
 import torch.nn.functional as F
 from torch.utils.data import Dataset
 from loguru import logger
-
-from model.loftr_src.utils.dataset import read_megadepth_gray, read_megadepth_depth
+import sys
+sys.path.append('/data/zjy/homography/model')
+from loftr_src.utils.dataset import read_megadepth_gray, read_megadepth_depth
 
 
 class MegaDepthDataset(Dataset):

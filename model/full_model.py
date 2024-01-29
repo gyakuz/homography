@@ -1,18 +1,21 @@
 from typing import Dict, Optional
-
+import numpy as np
 import torch
 import torch.nn as nn
+import random
 import torch.nn.functional as F
-from model.fine_matching2 import FineMatching2
+from fine_matching2 import FineMatching2
 # from einops.einops import rearrange
+import sys
+sys.path.append('/data/zjy/homography/model')  # 替换为包含 loftr_src 的目录
+import cv2
+from loftr_src.loftr.backbone import build_backbone
+from loftr_src.loftr.utils.position_encoding import PositionEncodingSine
+from loftr_src.loftr.loftr_module import LocalFeatureTransformer, FinePreprocess
+from loftr_src.loftr.utils.coarse_matching import CoarseMatching
 
-from model.loftr_src.loftr.backbone import build_backbone
-from model.loftr_src.loftr.utils.position_encoding import PositionEncodingSine
-from model.loftr_src.loftr.loftr_module import LocalFeatureTransformer, FinePreprocess
-from model.loftr_src.loftr.utils.coarse_matching import CoarseMatching
-
-from model.geo_module import GeoModule
-from .geo_config import default_cfg
+from geo_module import GeoModule
+from geo_config import default_cfg
 
 
 class GeoFormer(nn.Module):
@@ -20,7 +23,6 @@ class GeoFormer(nn.Module):
         super().__init__()
         # Misc
         self.config = loftr_config
-
         # Modules
         # with torch.no_grad():
         self.backbone = build_backbone(loftr_config)
@@ -50,8 +52,8 @@ class GeoFormer(nn.Module):
         data.update({
             'bs': torch.tensor(data['image0'].size(0)),
             'hw0_i': torch.tensor(data['image0'].shape[2:]), 'hw1_i': torch.tensor(data['image1'].shape[2:])
-        })
-
+        })#原始图像大小
+        # img0, img1 = data['image0'], data['image1']
         if data['hw0_i'][0] == data['hw1_i'][0] and data['hw0_i'][1] == data['hw1_i'][1]:  # faster & better BN convergence
             feats_c, feats_f = self.backbone(torch.cat([data['image0'], data['image1']], dim=0))
             (feat_c0, feat_c1), (feat_f0, feat_f1) = feats_c.split(data['bs']), feats_f.split(data['bs'])
@@ -62,7 +64,7 @@ class GeoFormer(nn.Module):
         data.update({
             'hw0_c': torch.tensor(feat_c0.shape[2:]), 'hw1_c': torch.tensor(feat_c1.shape[2:]),
             'hw0_f': torch.tensor(feat_f0.shape[2:]), 'hw1_f': torch.tensor(feat_f1.shape[2:])
-        })
+        })#feature map大小
 
         # 2. coarse-level loftr module
         # add featmap with positional encoding, then flatten it to sequence [N, HW, C]
@@ -85,9 +87,16 @@ class GeoFormer(nn.Module):
 
         # 3. match coarse-level
         self.coarse_matching(feat_c0, feat_c1, data, mask_c0=mask_c0, mask_c1=mask_c1)
-        data['dect_conf_matrix'] = data['conf_matrix']
-        feat_c0, feat_c1 = self.geo_module(cnn_feat0, cnn_feat1, data)
+        data['dect_conf_matrix0'] = data['conf_matrix']
+        feat_c0, feat_c1 = self.geo_module(cnn_feat0, cnn_feat1, data, window_size=5)
         self.coarse_matching(feat_c0, feat_c1, data, mask_c0=mask_c0, mask_c1=mask_c1)
+
+        # data['dect_conf_matrix1'] = data['conf_matrix']
+        # feat_c0, feat_c1 = self.geo_module(cnn_feat0, cnn_feat1, data, window_size=3)
+        # self.coarse_matching(feat_c0, feat_c1, data, mask_c0=mask_c0, mask_c1=mask_c1)
+
+        # 3+. recurrent model
+
 
         # feat_c0, feat_c1 = self.geo_module(feat_c0, feat_c1, feat_c0, feat_c1, data)
         # feat_f0 = F.upsample(feat_f0, scale_factor=2, mode='bilinear', align_corners=True)
@@ -127,3 +136,9 @@ class GeoFormer(nn.Module):
             if k.startswith('matcher.'):
                 state_dict[k.replace('matcher.', '', 1)] = state_dict.pop(k)
         return super().load_state_dict(state_dict, *args, **kwargs)
+
+
+
+
+
+
