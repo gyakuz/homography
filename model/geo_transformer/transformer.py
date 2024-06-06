@@ -48,7 +48,7 @@ class LoFTREncoderLayer(nn.Module):
 
         bs = x.size(0)
 
-        query, key, value = x, source, source
+        query, key, value = x.clone(), source, source
 
         # multi-head attention
         query = self.q_proj(query).view(bs, -1, self.nhead, self.dim)  # [N, L, (H, D)]

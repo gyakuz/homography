@@ -1,6 +1,6 @@
 import os
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '6'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2'
 
 import eval_tool.immatch as immatch
 from eval_tool.immatch.utils.data_io import lprint
@@ -22,7 +22,7 @@ def eval_hpatches(
         debug=False,
 ):
     # Init paths
-    data_root = os.path.join(root_dir, 'data/datasets/hpatches-sequences-release')
+    data_root = '/data/zjy/data/datasets/hpatches-sequences-release'
     cache_dir = os.path.join(root_dir, odir, 'cache')
     result_dir = os.path.join(root_dir, odir, 'results', task)
     if not os.path.exists(cache_dir):

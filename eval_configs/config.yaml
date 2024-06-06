@@ -1,0 +1,195 @@
+DATASET:
+  AUGMENTATION_TYPE: null
+  MGDPT_DEPTH_PAD: true
+  MGDPT_DF: 64
+  MGDPT_IMG_PAD: true
+  MGDPT_IMG_RESIZE: 704
+  MIN_OVERLAP_SCORE_TEST: 0.0
+  MIN_OVERLAP_SCORE_TRAIN: 0.0
+  TEST_DATA_ROOT: data/megadepth/test
+  TEST_DATA_SOURCE: MegaDepth
+  TEST_INTRINSIC_PATH: null
+  TEST_LIST_PATH: data/megadepth/index/trainvaltest_list/val_list.txt
+  TEST_NPZ_ROOT: data/megadepth/index/scene_info_val_1500
+  TEST_POSE_ROOT: null
+  TRAINVAL_DATA_SOURCE: MegaDepth
+  TRAIN_DATA_ROOT: data/megadepth/train
+  TRAIN_INTRINSIC_PATH: null
+  TRAIN_LIST_PATH: data/megadepth/index/trainvaltest_list/train_list.txt
+  TRAIN_NPZ_ROOT: data/megadepth/index/scene_info_0.1_0.7
+  TRAIN_POSE_ROOT: null
+  VAL_DATA_ROOT: data/megadepth/test
+  VAL_INTRINSIC_PATH: null
+  VAL_LIST_PATH: data/megadepth/index/trainvaltest_list/val_list.txt
+  VAL_NPZ_ROOT: data/megadepth/index/scene_info_val_1500
+  VAL_POSE_ROOT: null
+LOFTR:
+  BACKBONE_TYPE: Twins
+  CASCADE: true
+  CASCADE_LEVELS:
+  - 4
+  COARSE:
+    ATTENTION: linear
+    ATTN_TYPE: B
+    BLOCK_TYPE: quadtree
+    D_FFN: 256
+    D_MODEL: 256
+    LAYER_NAMES:
+    - self
+    - cross
+    - self
+    - cross
+    - self
+    - cross
+    NHEAD: 8
+    TEMP_BUG_FIX: true
+    TOPKS:
+    - 32
+    - 16
+    - 8
+  COARSE2:
+    ATTN_WINDOW_SIZE: 7
+    DILATED: 1
+    D_MODEL: 128
+    LAYER_NAMES:
+    - cross
+    - self
+    - cross
+    - self
+    NHEAD: 4
+    PROPAGATION: window
+    SELF_ATTN_TYPE: local
+    SR_RATIO: 4
+    WINDOW_SIZE: 5
+  COARSE3:
+    ATTN_WINDOW_SIZE: null
+    DILATED: 1
+    D_MODEL: 192
+    LAYER_NAMES:
+    - cross
+    - self
+    - cross
+    NHEAD: 6
+    PROPAGATION: window
+    SELF_ATTN_TYPE: local_global
+    SR_RATIO: 4
+    WINDOW_SIZE: 5
+  COARSE_LEVEL: 8
+  FINE:
+    ATTENTION: vanilla
+    : loftr
+    D_FFN: 64
+    D_MODEL: 64
+    LAYER_NAMES:
+    - self
+    - cross
+    NHEAD: 2
+  FINE_CONCAT_COARSE_FEAT: true
+  FINE_LEVEL: 2
+  FINE_WINDOW_SIZE: 5
+  IS_RGB: true
+  LOSS:
+    CASCADE_TYPE: focal
+    CASCADE_WEIGHT: 1.0
+    COARSE_TYPE: focal
+    COARSE_WEIGHT: 1.0
+    FINE_CORRECT_THR: 1.0
+    FINE_TYPE: l2_with_std
+    FINE_WEIGHT: 1.0
+    FOCAL_ALPHA: 0.25
+    FOCAL_GAMMA: 2.0
+    NEG_WEIGHT: 1.0
+    POS_WEIGHT: 1.0
+  MATCH_CASCADE:
+    BORDER_RM:
+    - 2
+    DOUBLE_CHECK:
+    - true
+    DSMAX_TEMPERATURE:
+    - 1.0
+    MATCH_TYPE:
+    - softmax
+    PRE_THR:
+    - 0.2
+    SKH_INIT_BIN_SCORE: 1.0
+    SKH_ITERS: 3
+    SKH_PREFILTER: false
+    SPARSE_SPVS: true
+    TEST_THR:
+    - 0.2
+    THR:
+    - 0.0101
+    TRAIN_PAD_NUM_GT_MIN:
+    - 4096
+  MATCH_COARSE:
+    BORDER_RM: 0
+    DSMAX_TEMPERATURE: 0.1
+    MATCH_TYPE: dual_softmax
+    SKH_INIT_BIN_SCORE: 1.0
+    SKH_ITERS: 3
+    SKH_PREFILTER: false
+    SPARSE_SPVS: false
+    THR: 0.2
+    TRAIN_COARSE_PERCENT: 0.3
+    TRAIN_PAD_NUM_GT_MIN: 200
+  RESNETFPN:
+    BLOCK_DIMS:
+    - 64
+    - 128
+    - 256
+    EMBED_DIMS: []
+    INITIAL_DIM: 64
+    MODEL_TYPE: large
+    VIT_PATH: /home/wmlce/SmashMVS/pretrained_weights/alt_gvt_large.pth
+  RESOLUTION:
+  - 8
+  - 4
+  - 2
+  TRAINING_STAGE: 2
+  TRAIN_SIZE: 704
+TRAINER:
+  ADAMW_DECAY: 0.01
+  ADAM_DECAY: 0.0
+  CANONICAL_BS: 64
+  CANONICAL_LR: 0.008
+  COSA_TMAX: 30
+  DATA_SAMPLER: scene_balance
+  ELR_GAMMA: 0.999992
+  ENABLE_PLOTTING: true
+  EPI_ERR_THR: 0.0005
+  FIND_LR: false
+  GRADIENT_CLIPPING: 0.5
+  MSLR_GAMMA: 0.5
+  MSLR_MILESTONES:
+  - 8
+  - 12
+  - 16
+  - 20
+  - 24
+  N_SAMPLES_PER_SUBSET: 100
+  N_VAL_PAIRS_TO_PLOT: 32
+  OPTIMIZER: adamw
+  PLOT_MATCHES_ALPHA: dynamic
+  PLOT_MODE: evaluation
+  POSE_ESTIMATION_METHOD: RANSAC
+  POSE_GEO_MODEL: E
+  RANSAC_CONF: 0.99999
+  RANSAC_MAX_ITERS: 10000
+  RANSAC_PIXEL_THR: 0.5
+  RDM_NUM_SAMPLES: null
+  RDM_REPLACEMENT: true
+  SB_REPEAT: 1
+  SB_SUBSET_SAMPLE_REPLACEMENT: true
+  SB_SUBSET_SHUFFLE: true
+  SCALING: 0.0625
+  SCHEDULER: MultiStepLR
+  SCHEDULER_INTERVAL: epoch
+  SEED: 66
+  TRUE_BATCH_SIZE: 4
+  TRUE_LR: 0.0005
+  USE_MAGSACPP: false
+  VIT_LR_SCALE: 0.5
+  WARMUP_RATIO: 0.1
+  WARMUP_STEP: 30000
+  WARMUP_TYPE: linear
+  WORLD_SIZE: 4

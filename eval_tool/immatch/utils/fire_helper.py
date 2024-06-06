@@ -194,7 +194,7 @@ def eval_fire(
                 #     kp0, kp1 = torch.from_numpy(kp0), torch.from_numpy(kp1)
                 #
                 #     print(im1_path, im2_path, avg_dist)
-                #     # if im2_path == './data/datasets/hpatches-sequences-release/i_bridger/6.ppm':
+                #     # if im2_path == './data//hpatches-sequences-release/i_bridger/6.ppm':
                 #     # import matplotlib.pyplot as plt
                 #     # im1 = cv2.imread(im1_path, 0)
                 #     # im2 = cv2.imread(im2_path, 0)

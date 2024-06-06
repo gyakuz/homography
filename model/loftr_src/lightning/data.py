@@ -1,6 +1,7 @@
 import os
 import math
 from collections import abc
+import torch
 from loguru import logger
 from torch.utils.data.dataset import Dataset
 from tqdm import tqdm
@@ -16,7 +17,7 @@ from torch.utils.data import (
     ConcatDataset,
     DistributedSampler,
     RandomSampler,
-    dataloader
+    dataloader, default_collate
 )
 
 from homodataset.HomoDataset import HomoDataset
@@ -354,7 +355,7 @@ class HomoDataModule(pl.LightningDataModule):
             stage (str): 'fit' in training phase, and 'test' in testing phase.
         """
 
-        assert stage in ['fit', 'test'], "stage must be either fit or test"
+        assert stage in ['fit', 'validate', 'test'], "stage must be either fit , validate or test"
 
         try:
             self.world_size = dist.get_world_size()
@@ -365,14 +366,21 @@ class HomoDataModule(pl.LightningDataModule):
             self.rank = 0
             logger.warning(str(ae) + " (set wolrd_size=1 and rank=0)")
 
+        self.val_dataset = HomoDataset(self.trainval_data_source, self.img_size, st=0,
+                                           rank=self.rank, word_size=self.world_size)
+        from homodataset.hpatches import HpatchesDataset
+        self.hpatch_dataset = HpatchesDataset(st=0,
+                                              rank=self.rank, world_size=self.world_size)
+
         if stage == 'fit':
             self.train_dataset = HomoDataset(self.trainval_data_source, self.img_size, st=0,
                                              rank=self.rank, word_size=self.world_size)
-
-            self.val_dataset = HomoDataset(self.trainval_data_source, self.img_size, st=0,
-                                           rank=self.rank, word_size=self.world_size)
+            pass
+        elif stage == 'validate':
+            pass
         else:  # stage == 'test
             self.test_dataset = None
+        self.stage = stage
 
     def train_dataloader(self):
         """ Build training dataloader for ScanNet / MegaDepth. """
@@ -385,9 +393,17 @@ class HomoDataModule(pl.LightningDataModule):
 
     def val_dataloader(self):
 
-        dataloader = DataLoader(self.val_dataset, **self.val_loader_params)
-        return dataloader
+        def custom_collate_fn(batch):
+            # 处理每个batch中的数据项
+            batch = [{k: torch.zeros(0) if v is None else v for k, v in item.items()} for item in batch]
+            return default_collate(batch)
 
+        dataloader_hpatch = DataLoader(self.hpatch_dataset, collate_fn=custom_collate_fn, **self.val_loader_params)
+        dataloader = DataLoader(self.val_dataset, **self.val_loader_params)
+        if self.stage == 'fit':
+            return [dataloader_hpatch, dataloader, ]
+        else:
+            return dataloader_hpatch
 
 def _build_dataset(dataset: Dataset, *args, **kwargs):
     return dataset(*args, **kwargs)

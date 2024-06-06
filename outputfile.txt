@@ -1,0 +1,2337 @@
+/data/zjy/homography
+
+>>>> Method=GeoFormer Default config: {'class': 'GeoFormer', 'match_threshold': 0.2, 'imsize': 480, 'no_match_upscale': True, 'ckpt': 'saved_ckpt/quadtree.ckpt'} Thres: [0.2]
+Initialize GeoFormer_quadtree_noms
+Matching thres: 0.2  Save to: None
+
+>>>>Eval hpatches: task=homography method=GeoFormer_quadtree_noms scale_H=True rthres=3 thres=[1, 3, 5, 10] 
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_yuri, pair:1-2 matches:2624
+Corner dist:1.73 inliers:2205
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_yuri, pair:1-3 matches:1745
+Corner dist:2.72 inliers:1361
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_yuri, pair:1-4 matches:1476
+Corner dist:87.03 inliers:871
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_yuri, pair:1-5 matches:1941
+Corner dist:1.99 inliers:1423
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_yuri, pair:1-6 matches:1475
+Corner dist:18.51 inliers:868
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_yard, pair:1-2 matches:3324
+Corner dist:0.43 inliers:3029
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_yard, pair:1-3 matches:2031
+Corner dist:1.37 inliers:1666
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_yard, pair:1-4 matches:2939
+Corner dist:0.30 inliers:2734
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_yard, pair:1-5 matches:2537
+Corner dist:1.88 inliers:1825
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_yard, pair:1-6 matches:2086
+Corner dist:4.09 inliers:1085
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_wounded, pair:1-2 matches:2171
+Corner dist:1.37 inliers:1780
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_wounded, pair:1-3 matches:1725
+Corner dist:1.86 inliers:1252
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_wounded, pair:1-4 matches:1234
+Corner dist:8.66 inliers:524
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_wounded, pair:1-5 matches:1749
+Corner dist:7.08 inliers:1148
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_wounded, pair:1-6 matches:1299
+Corner dist:7.21 inliers:658
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_wormhole, pair:1-2 matches:2961
+Corner dist:1.59 inliers:2690
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_wormhole, pair:1-3 matches:3543
+Corner dist:0.50 inliers:3272
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_wormhole, pair:1-4 matches:3637
+Corner dist:0.97 inliers:3491
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_wormhole, pair:1-5 matches:2575
+Corner dist:6.68 inliers:2142
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_wormhole, pair:1-6 matches:1642
+Corner dist:16.42 inliers:844
+torch.Size([1, 1, 640, 640]) torch.Size([1, 1, 640, 640])
+pause
+Scene v_woman, pair:1-2 matches:1548
+Corner dist:0.69 inliers:1222
+torch.Size([1, 1, 640, 640]) torch.Size([1, 1, 640, 640])
+pause
+Scene v_woman, pair:1-3 matches:2145
+Corner dist:1.91 inliers:1737
+torch.Size([1, 1, 640, 640]) torch.Size([1, 1, 640, 640])
+pause
+Scene v_woman, pair:1-4 matches:1970
+Corner dist:2.17 inliers:1270
+torch.Size([1, 1, 640, 640]) torch.Size([1, 1, 640, 640])
+pause
+Scene v_woman, pair:1-5 matches:1240
+Corner dist:3.89 inliers:679
+torch.Size([1, 1, 640, 640]) torch.Size([1, 1, 640, 640])
+pause
+Scene v_woman, pair:1-6 matches:1689
+Corner dist:1.91 inliers:1066
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_weapons, pair:1-2 matches:2703
+Corner dist:1.53 inliers:2196
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_weapons, pair:1-3 matches:2297
+Corner dist:1.83 inliers:1712
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_weapons, pair:1-4 matches:2421
+Corner dist:2.98 inliers:2077
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_weapons, pair:1-5 matches:2636
+Corner dist:1.70 inliers:2006
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_weapons, pair:1-6 matches:2452
+Corner dist:1.61 inliers:2256
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_war, pair:1-2 matches:2304
+Corner dist:2.32 inliers:1676
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_war, pair:1-3 matches:1865
+Corner dist:3.15 inliers:1020
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_war, pair:1-4 matches:2712
+Corner dist:0.32 inliers:2418
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_war, pair:1-5 matches:2701
+Corner dist:1.31 inliers:2176
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_war, pair:1-6 matches:1801
+Corner dist:3.24 inliers:1092
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_wapping, pair:1-2 matches:3259
+Corner dist:0.44 inliers:2752
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_wapping, pair:1-3 matches:2407
+Corner dist:1.51 inliers:1755
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_wapping, pair:1-4 matches:2561
+Corner dist:0.87 inliers:1849
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_wapping, pair:1-5 matches:1789
+Corner dist:1.73 inliers:1233
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_wapping, pair:1-6 matches:1221
+Corner dist:3.88 inliers:810
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_wall, pair:1-2 matches:3898
+Corner dist:0.61 inliers:3359
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_wall, pair:1-3 matches:3423
+Corner dist:1.62 inliers:2696
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_wall, pair:1-4 matches:3883
+Corner dist:0.44 inliers:3499
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_wall, pair:1-5 matches:3151
+Corner dist:1.65 inliers:2118
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_wall, pair:1-6 matches:2893
+Corner dist:10.97 inliers:1854
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_vitro, pair:1-2 matches:3365
+Corner dist:0.32 inliers:2852
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_vitro, pair:1-3 matches:3030
+Corner dist:1.00 inliers:2377
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_vitro, pair:1-4 matches:2480
+Corner dist:1.04 inliers:1931
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_vitro, pair:1-5 matches:3037
+Corner dist:0.71 inliers:2517
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_vitro, pair:1-6 matches:2743
+Corner dist:1.57 inliers:2035
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_underground, pair:1-2 matches:3743
+Corner dist:0.45 inliers:3098
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_underground, pair:1-3 matches:3216
+Corner dist:0.98 inliers:2523
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_underground, pair:1-4 matches:2434
+Corner dist:2.04 inliers:1866
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_underground, pair:1-5 matches:2035
+Corner dist:2.83 inliers:1378
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_underground, pair:1-6 matches:1634
+Corner dist:9.37 inliers:727
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_there, pair:1-2 matches:3253
+Corner dist:0.70 inliers:2807
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_there, pair:1-3 matches:1114
+Corner dist:1.40 inliers:696
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_there, pair:1-4 matches:1317
+Corner dist:431.23 inliers:119
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_there, pair:1-5 matches:1114
+Corner dist:542.63 inliers:79
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_there, pair:1-6 matches:1002
+Corner dist:788.13 inliers:83
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_tempera, pair:1-2 matches:2341
+Corner dist:0.49 inliers:1829
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_tempera, pair:1-3 matches:2635
+Corner dist:0.36 inliers:2360
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_tempera, pair:1-4 matches:2107
+Corner dist:0.53 inliers:1727
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_tempera, pair:1-5 matches:2054
+Corner dist:1.01 inliers:1755
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_tempera, pair:1-6 matches:1588
+Corner dist:3.44 inliers:1206
+torch.Size([1, 1, 1184, 1184]) torch.Size([1, 1, 1184, 1184])
+pause
+Scene v_talent, pair:1-2 matches:4708
+Corner dist:1.10 inliers:3652
+torch.Size([1, 1, 1184, 1184]) torch.Size([1, 1, 1184, 1184])
+pause
+Scene v_talent, pair:1-3 matches:4195
+Corner dist:0.71 inliers:3506
+torch.Size([1, 1, 1184, 1184]) torch.Size([1, 1, 1184, 1184])
+pause
+Scene v_talent, pair:1-4 matches:3905
+Corner dist:1.78 inliers:3003
+torch.Size([1, 1, 1184, 1184]) torch.Size([1, 1, 1184, 1184])
+pause
+Scene v_talent, pair:1-5 matches:2868
+Corner dist:4.48 inliers:1633
+torch.Size([1, 1, 1184, 1184]) torch.Size([1, 1, 1184, 1184])
+pause
+Scene v_talent, pair:1-6 matches:3539
+Corner dist:1.93 inliers:1987
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_tabletop, pair:1-2 matches:2734
+Corner dist:0.56 inliers:2181
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_tabletop, pair:1-3 matches:1843
+Corner dist:2.82 inliers:1063
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_tabletop, pair:1-4 matches:1920
+Corner dist:1.30 inliers:1225
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_tabletop, pair:1-5 matches:1969
+Corner dist:0.76 inliers:1354
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_tabletop, pair:1-6 matches:2032
+Corner dist:0.93 inliers:1541
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_sunseason, pair:1-2 matches:4455
+Corner dist:0.09 inliers:4308
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_sunseason, pair:1-3 matches:3820
+Corner dist:0.11 inliers:3689
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_sunseason, pair:1-4 matches:2438
+Corner dist:1.60 inliers:1970
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_sunseason, pair:1-5 matches:2239
+Corner dist:0.94 inliers:1814
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_sunseason, pair:1-6 matches:1866
+Corner dist:0.76 inliers:1384
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_strand, pair:1-2 matches:3580
+Corner dist:0.28 inliers:3345
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_strand, pair:1-3 matches:2812
+Corner dist:3.15 inliers:1865
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_strand, pair:1-4 matches:2877
+Corner dist:4.15 inliers:1888
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_strand, pair:1-5 matches:2649
+Corner dist:3.37 inliers:2221
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_strand, pair:1-6 matches:2290
+Corner dist:5.71 inliers:1704
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_soldiers, pair:1-2 matches:2798
+Corner dist:0.61 inliers:2472
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_soldiers, pair:1-3 matches:2295
+Corner dist:0.40 inliers:2036
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_soldiers, pair:1-4 matches:1871
+Corner dist:1.57 inliers:1416
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_soldiers, pair:1-5 matches:1732
+Corner dist:10.59 inliers:971
+torch.Size([1, 1, 640, 640]) torch.Size([1, 1, 640, 640])
+pause
+Scene v_soldiers, pair:1-6 matches:2413
+Corner dist:0.87 inliers:2064
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene v_samples, pair:1-2 matches:1465
+Corner dist:0.54 inliers:1303
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene v_samples, pair:1-3 matches:1631
+Corner dist:0.65 inliers:1349
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene v_samples, pair:1-4 matches:1489
+Corner dist:0.50 inliers:1351
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene v_samples, pair:1-5 matches:1440
+Corner dist:0.20 inliers:1378
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene v_samples, pair:1-6 matches:1426
+Corner dist:0.24 inliers:1313
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene v_posters, pair:1-2 matches:964
+Corner dist:0.50 inliers:832
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene v_posters, pair:1-3 matches:1361
+Corner dist:0.87 inliers:1086
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene v_posters, pair:1-4 matches:1200
+Corner dist:0.22 inliers:1097
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene v_posters, pair:1-5 matches:1081
+Corner dist:0.87 inliers:892
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene v_posters, pair:1-6 matches:1178
+Corner dist:1.73 inliers:870
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_pomegranate, pair:1-2 matches:3476
+Corner dist:2.04 inliers:2514
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_pomegranate, pair:1-3 matches:3132
+Corner dist:0.93 inliers:2315
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_pomegranate, pair:1-4 matches:2739
+Corner dist:0.56 inliers:2220
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_pomegranate, pair:1-5 matches:3098
+Corner dist:1.00 inliers:2564
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_pomegranate, pair:1-6 matches:3000
+Corner dist:1.06 inliers:2289
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_maskedman, pair:1-2 matches:3133
+Corner dist:1.09 inliers:2361
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_maskedman, pair:1-3 matches:2286
+Corner dist:2.46 inliers:1577
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_maskedman, pair:1-4 matches:2935
+Corner dist:5.01 inliers:2126
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_maskedman, pair:1-5 matches:3163
+Corner dist:2.74 inliers:2668
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_maskedman, pair:1-6 matches:1284
+Corner dist:5.40 inliers:724
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_man, pair:1-2 matches:2960
+Corner dist:3.08 inliers:2054
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_man, pair:1-3 matches:2189
+Corner dist:6.27 inliers:1602
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_man, pair:1-4 matches:2250
+Corner dist:5.94 inliers:1326
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_man, pair:1-5 matches:2863
+Corner dist:2.38 inliers:2362
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_man, pair:1-6 matches:2658
+Corner dist:3.26 inliers:2011
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_machines, pair:1-2 matches:2964
+Corner dist:1.03 inliers:2306
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_machines, pair:1-3 matches:2027
+Corner dist:6.06 inliers:1207
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_machines, pair:1-4 matches:2271
+Corner dist:1.25 inliers:1858
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_machines, pair:1-5 matches:1661
+Corner dist:2.48 inliers:1157
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_machines, pair:1-6 matches:2117
+Corner dist:0.09 inliers:1970
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_london, pair:1-2 matches:3729
+Corner dist:0.15 inliers:3642
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_london, pair:1-3 matches:3442
+Corner dist:0.18 inliers:3335
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_london, pair:1-4 matches:3075
+Corner dist:0.72 inliers:2874
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_london, pair:1-5 matches:3772
+Corner dist:0.20 inliers:3502
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_london, pair:1-6 matches:4051
+Corner dist:0.21 inliers:3856
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_laptop, pair:1-2 matches:2548
+Corner dist:0.31 inliers:2344
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_laptop, pair:1-3 matches:1616
+Corner dist:0.43 inliers:1217
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_laptop, pair:1-4 matches:1194
+Corner dist:7.25 inliers:477
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_laptop, pair:1-5 matches:609
+Corner dist:198.06 inliers:70
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_laptop, pair:1-6 matches:541
+Corner dist:133.49 inliers:91
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_home, pair:1-2 matches:2189
+Corner dist:1.03 inliers:1931
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_home, pair:1-3 matches:2020
+Corner dist:2.01 inliers:1699
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_home, pair:1-4 matches:2138
+Corner dist:1.17 inliers:1795
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_home, pair:1-5 matches:1900
+Corner dist:8.09 inliers:1541
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_home, pair:1-6 matches:1952
+Corner dist:0.89 inliers:1284
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_graffiti, pair:1-2 matches:2661
+Corner dist:0.56 inliers:2020
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_graffiti, pair:1-3 matches:2140
+Corner dist:1.93 inliers:1303
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_graffiti, pair:1-4 matches:1804
+Corner dist:1.66 inliers:889
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_graffiti, pair:1-5 matches:1308
+Corner dist:0.74 inliers:742
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_graffiti, pair:1-6 matches:691
+Corner dist:77.49 inliers:92
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_grace, pair:1-2 matches:3556
+Corner dist:0.18 inliers:3359
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_grace, pair:1-3 matches:3327
+Corner dist:0.91 inliers:2658
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_grace, pair:1-4 matches:2898
+Corner dist:0.36 inliers:2475
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_grace, pair:1-5 matches:2318
+Corner dist:1.54 inliers:1442
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_grace, pair:1-6 matches:1783
+Corner dist:1.83 inliers:987
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_gardens, pair:1-2 matches:2752
+Corner dist:1.31 inliers:2180
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_gardens, pair:1-3 matches:1752
+Corner dist:5.37 inliers:1143
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_gardens, pair:1-4 matches:3255
+Corner dist:0.40 inliers:3070
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_gardens, pair:1-5 matches:2105
+Corner dist:6.77 inliers:1332
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_gardens, pair:1-6 matches:2949
+Corner dist:0.50 inliers:2617
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_fest, pair:1-2 matches:3338
+Corner dist:0.41 inliers:3086
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_fest, pair:1-3 matches:2525
+Corner dist:4.87 inliers:1712
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_fest, pair:1-4 matches:2689
+Corner dist:0.30 inliers:2448
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_fest, pair:1-5 matches:2616
+Corner dist:1.62 inliers:2139
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_fest, pair:1-6 matches:2171
+Corner dist:3.57 inliers:1574
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_feast, pair:1-2 matches:2199
+Corner dist:0.25 inliers:2006
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_feast, pair:1-3 matches:2952
+Corner dist:2.19 inliers:2393
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_feast, pair:1-4 matches:1822
+Corner dist:0.89 inliers:1466
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_feast, pair:1-5 matches:2638
+Corner dist:1.70 inliers:2103
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_feast, pair:1-6 matches:2069
+Corner dist:0.16 inliers:1569
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_eastsouth, pair:1-2 matches:2924
+Corner dist:0.31 inliers:2854
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_eastsouth, pair:1-3 matches:1923
+Corner dist:1.47 inliers:1361
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_eastsouth, pair:1-4 matches:1151
+Corner dist:62.08 inliers:127
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_eastsouth, pair:1-5 matches:775
+Corner dist:1.77 inliers:332
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_eastsouth, pair:1-6 matches:838
+Corner dist:132.82 inliers:125
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_dogman, pair:1-2 matches:3028
+Corner dist:2.65 inliers:2419
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_dogman, pair:1-3 matches:3362
+Corner dist:0.52 inliers:2901
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_dogman, pair:1-4 matches:1808
+Corner dist:11.92 inliers:909
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_dogman, pair:1-5 matches:2505
+Corner dist:1.55 inliers:1792
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_dogman, pair:1-6 matches:1356
+Corner dist:38.61 inliers:651
+torch.Size([1, 1, 704, 480]) torch.Size([1, 1, 704, 480])
+pause
+Scene v_dirtywall, pair:1-2 matches:3418
+Corner dist:0.19 inliers:3285
+torch.Size([1, 1, 704, 480]) torch.Size([1, 1, 704, 480])
+pause
+Scene v_dirtywall, pair:1-3 matches:3219
+Corner dist:0.26 inliers:2952
+torch.Size([1, 1, 704, 480]) torch.Size([1, 1, 704, 480])
+pause
+Scene v_dirtywall, pair:1-4 matches:2701
+Corner dist:0.99 inliers:1969
+torch.Size([1, 1, 704, 480]) torch.Size([1, 1, 704, 480])
+pause
+Scene v_dirtywall, pair:1-5 matches:2865
+Corner dist:0.51 inliers:2242
+torch.Size([1, 1, 704, 480]) torch.Size([1, 1, 704, 480])
+pause
+Scene v_dirtywall, pair:1-6 matches:1910
+Corner dist:0.89 inliers:1357
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_courses, pair:1-2 matches:2987
+Corner dist:1.67 inliers:2270
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_courses, pair:1-3 matches:2498
+Corner dist:1.75 inliers:1680
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_courses, pair:1-4 matches:2476
+Corner dist:2.19 inliers:1915
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_courses, pair:1-5 matches:1950
+Corner dist:4.19 inliers:1184
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_courses, pair:1-6 matches:1730
+Corner dist:5.57 inliers:858
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_colors, pair:1-2 matches:2498
+Corner dist:0.80 inliers:1819
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_colors, pair:1-3 matches:2262
+Corner dist:2.03 inliers:1316
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_colors, pair:1-4 matches:1479
+Corner dist:8.38 inliers:614
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_colors, pair:1-5 matches:1223
+Corner dist:24.79 inliers:484
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_colors, pair:1-6 matches:648
+Corner dist:28.55 inliers:95
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_coffeehouse, pair:1-2 matches:3114
+Corner dist:1.79 inliers:2491
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_coffeehouse, pair:1-3 matches:3103
+Corner dist:1.42 inliers:2172
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_coffeehouse, pair:1-4 matches:2833
+Corner dist:1.65 inliers:2006
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_coffeehouse, pair:1-5 matches:2583
+Corner dist:0.54 inliers:2041
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_coffeehouse, pair:1-6 matches:2115
+Corner dist:2.53 inliers:1475
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_circus, pair:1-2 matches:2144
+Corner dist:0.86 inliers:1595
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_circus, pair:1-3 matches:2035
+Corner dist:1.98 inliers:991
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_circus, pair:1-4 matches:1679
+Corner dist:5.28 inliers:807
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_circus, pair:1-5 matches:2221
+Corner dist:1.32 inliers:1438
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_circus, pair:1-6 matches:1797
+Corner dist:1.33 inliers:1115
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_churchill, pair:1-2 matches:2384
+Corner dist:1.46 inliers:2233
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_churchill, pair:1-3 matches:2111
+Corner dist:2.22 inliers:1698
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_churchill, pair:1-4 matches:2058
+Corner dist:2.46 inliers:1602
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_churchill, pair:1-5 matches:3012
+Corner dist:0.63 inliers:2678
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_churchill, pair:1-6 matches:1636
+Corner dist:2.97 inliers:1232
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_charing, pair:1-2 matches:1187
+Corner dist:6.98 inliers:755
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_charing, pair:1-3 matches:966
+Corner dist:213.66 inliers:468
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_charing, pair:1-4 matches:1029
+Corner dist:8.06 inliers:697
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_charing, pair:1-5 matches:1076
+Corner dist:8.97 inliers:661
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_charing, pair:1-6 matches:1070
+Corner dist:261.02 inliers:569
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_cartooncity, pair:1-2 matches:3726
+Corner dist:0.21 inliers:3483
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_cartooncity, pair:1-3 matches:2211
+Corner dist:1.17 inliers:1688
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_cartooncity, pair:1-4 matches:3407
+Corner dist:0.26 inliers:3134
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_cartooncity, pair:1-5 matches:2364
+Corner dist:2.98 inliers:1816
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_cartooncity, pair:1-6 matches:2093
+Corner dist:2.06 inliers:1686
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_calder, pair:1-2 matches:2383
+Corner dist:0.48 inliers:2151
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_calder, pair:1-3 matches:3144
+Corner dist:0.44 inliers:2986
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_calder, pair:1-4 matches:1579
+Corner dist:0.76 inliers:1236
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_calder, pair:1-5 matches:1239
+Corner dist:0.54 inliers:1034
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_calder, pair:1-6 matches:832
+Corner dist:2.84 inliers:469
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_busstop, pair:1-2 matches:3312
+Corner dist:0.64 inliers:2886
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_busstop, pair:1-3 matches:2791
+Corner dist:1.28 inliers:2000
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_busstop, pair:1-4 matches:2899
+Corner dist:0.84 inliers:2678
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_busstop, pair:1-5 matches:2614
+Corner dist:0.47 inliers:2537
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_busstop, pair:1-6 matches:3216
+Corner dist:0.65 inliers:2773
+torch.Size([1, 1, 672, 672]) torch.Size([1, 1, 672, 672])
+pause
+Scene v_bricks, pair:1-2 matches:4241
+Corner dist:0.61 inliers:3477
+torch.Size([1, 1, 672, 672]) torch.Size([1, 1, 672, 672])
+pause
+Scene v_bricks, pair:1-3 matches:3931
+Corner dist:0.28 inliers:3801
+torch.Size([1, 1, 672, 672]) torch.Size([1, 1, 672, 672])
+pause
+Scene v_bricks, pair:1-4 matches:3291
+Corner dist:0.48 inliers:3038
+torch.Size([1, 1, 672, 672]) torch.Size([1, 1, 672, 672])
+pause
+Scene v_bricks, pair:1-5 matches:2890
+Corner dist:0.29 inliers:2694
+torch.Size([1, 1, 672, 672]) torch.Size([1, 1, 672, 672])
+pause
+Scene v_bricks, pair:1-6 matches:2272
+Corner dist:0.92 inliers:1740
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_boat, pair:1-2 matches:2984
+Corner dist:0.32 inliers:2810
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_boat, pair:1-3 matches:1974
+Corner dist:1.36 inliers:1143
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_boat, pair:1-4 matches:1316
+Corner dist:6.02 inliers:330
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_boat, pair:1-5 matches:428
+Corner dist:340.21 inliers:39
+torch.Size([1, 1, 480, 576]) torch.Size([1, 1, 480, 576])
+pause
+Scene v_boat, pair:1-6 matches:676
+Corner dist:3.20 inliers:329
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_blueprint, pair:1-2 matches:3003
+Corner dist:0.50 inliers:2481
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_blueprint, pair:1-3 matches:2504
+Corner dist:1.47 inliers:1997
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_blueprint, pair:1-4 matches:2816
+Corner dist:0.45 inliers:2600
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_blueprint, pair:1-5 matches:2106
+Corner dist:0.87 inliers:1819
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_blueprint, pair:1-6 matches:1688
+Corner dist:1.71 inliers:1228
+torch.Size([1, 1, 640, 640]) torch.Size([1, 1, 640, 640])
+pause
+Scene v_birdwoman, pair:1-2 matches:757
+Corner dist:4.06 inliers:396
+torch.Size([1, 1, 640, 640]) torch.Size([1, 1, 640, 640])
+pause
+Scene v_birdwoman, pair:1-3 matches:1323
+Corner dist:2.47 inliers:893
+torch.Size([1, 1, 640, 640]) torch.Size([1, 1, 640, 640])
+pause
+Scene v_birdwoman, pair:1-4 matches:1839
+Corner dist:0.35 inliers:1573
+torch.Size([1, 1, 640, 640]) torch.Size([1, 1, 640, 640])
+pause
+Scene v_birdwoman, pair:1-5 matches:2872
+Corner dist:0.39 inliers:2683
+torch.Size([1, 1, 640, 640]) torch.Size([1, 1, 640, 640])
+pause
+Scene v_birdwoman, pair:1-6 matches:1692
+Corner dist:0.70 inliers:1504
+torch.Size([1, 1, 512, 512]) torch.Size([1, 1, 512, 512])
+pause
+Scene v_bird, pair:1-2 matches:1088
+Corner dist:0.57 inliers:941
+torch.Size([1, 1, 512, 512]) torch.Size([1, 1, 512, 512])
+pause
+Scene v_bird, pair:1-3 matches:1126
+Corner dist:1.90 inliers:819
+torch.Size([1, 1, 512, 512]) torch.Size([1, 1, 512, 512])
+pause
+Scene v_bird, pair:1-4 matches:1274
+Corner dist:1.45 inliers:1015
+torch.Size([1, 1, 512, 512]) torch.Size([1, 1, 512, 512])
+pause
+Scene v_bird, pair:1-5 matches:1243
+Corner dist:5.15 inliers:920
+torch.Size([1, 1, 512, 512]) torch.Size([1, 1, 512, 512])
+pause
+Scene v_bird, pair:1-6 matches:830
+Corner dist:5.66 inliers:393
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_bip, pair:1-2 matches:2175
+Corner dist:0.29 inliers:1936
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_bip, pair:1-3 matches:1923
+Corner dist:0.63 inliers:1481
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_bip, pair:1-4 matches:2038
+Corner dist:0.47 inliers:1847
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_bip, pair:1-5 matches:947
+Corner dist:0.83 inliers:710
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_bip, pair:1-6 matches:848
+Corner dist:145.28 inliers:144
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_beyus, pair:1-2 matches:1463
+Corner dist:1.23 inliers:1104
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_beyus, pair:1-3 matches:1648
+Corner dist:3.76 inliers:954
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_beyus, pair:1-4 matches:1908
+Corner dist:0.56 inliers:1704
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_beyus, pair:1-5 matches:1269
+Corner dist:1.80 inliers:800
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_beyus, pair:1-6 matches:1830
+Corner dist:1.49 inliers:1263
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_bees, pair:1-2 matches:3673
+Corner dist:0.49 inliers:3520
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_bees, pair:1-3 matches:3693
+Corner dist:1.18 inliers:2959
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_bees, pair:1-4 matches:3414
+Corner dist:0.88 inliers:3122
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_bees, pair:1-5 matches:2804
+Corner dist:1.54 inliers:2417
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_bees, pair:1-6 matches:2553
+Corner dist:1.22 inliers:1825
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_bark, pair:1-2 matches:2865
+Corner dist:0.76 inliers:2167
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_bark, pair:1-3 matches:1420
+Corner dist:2655.53 inliers:103
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_bark, pair:1-4 matches:1288
+Corner dist:477.32 inliers:149
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_bark, pair:1-5 matches:1545
+Corner dist:282.87 inliers:170
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene v_bark, pair:1-6 matches:776
+Corner dist:560.16 inliers:73
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_azzola, pair:1-2 matches:3189
+Corner dist:1.07 inliers:2515
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_azzola, pair:1-3 matches:2590
+Corner dist:1.81 inliers:1796
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_azzola, pair:1-4 matches:3207
+Corner dist:0.55 inliers:3070
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_azzola, pair:1-5 matches:2168
+Corner dist:2.71 inliers:1525
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_azzola, pair:1-6 matches:1405
+Corner dist:3.83 inliers:654
+torch.Size([1, 1, 1024, 1024]) torch.Size([1, 1, 1024, 1024])
+pause
+Scene v_astronautis, pair:1-2 matches:4613
+Corner dist:1.72 inliers:3837
+torch.Size([1, 1, 1024, 1024]) torch.Size([1, 1, 1024, 1024])
+pause
+Scene v_astronautis, pair:1-3 matches:3788
+Corner dist:11.74 inliers:2358
+torch.Size([1, 1, 1024, 1024]) torch.Size([1, 1, 1024, 1024])
+pause
+Scene v_astronautis, pair:1-4 matches:3933
+Corner dist:3.29 inliers:2895
+torch.Size([1, 1, 1024, 1024]) torch.Size([1, 1, 1024, 1024])
+pause
+Scene v_astronautis, pair:1-5 matches:3209
+Corner dist:3.73 inliers:2001
+torch.Size([1, 1, 1024, 1024]) torch.Size([1, 1, 1024, 1024])
+pause
+Scene v_astronautis, pair:1-6 matches:4763
+Corner dist:2.16 inliers:3709
+torch.Size([1, 1, 1152, 1152]) torch.Size([1, 1, 1152, 1152])
+pause
+Scene v_artisans, pair:1-2 matches:5142
+Corner dist:0.90 inliers:4776
+torch.Size([1, 1, 1152, 1152]) torch.Size([1, 1, 1152, 1152])
+pause
+Scene v_artisans, pair:1-3 matches:4865
+Corner dist:1.33 inliers:4109
+torch.Size([1, 1, 1152, 1152]) torch.Size([1, 1, 1152, 1152])
+pause
+Scene v_artisans, pair:1-4 matches:5482
+Corner dist:0.91 inliers:4870
+torch.Size([1, 1, 1152, 1152]) torch.Size([1, 1, 1152, 1152])
+pause
+Scene v_artisans, pair:1-5 matches:3014
+Corner dist:55.51 inliers:1436
+torch.Size([1, 1, 1152, 1152]) torch.Size([1, 1, 1152, 1152])
+pause
+Scene v_artisans, pair:1-6 matches:5363
+Corner dist:0.51 inliers:4795
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_apprentices, pair:1-2 matches:3465
+Corner dist:0.67 inliers:2721
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_apprentices, pair:1-3 matches:3019
+Corner dist:0.34 inliers:2781
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_apprentices, pair:1-4 matches:2551
+Corner dist:0.71 inliers:2312
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_apprentices, pair:1-5 matches:2099
+Corner dist:0.73 inliers:1661
+torch.Size([1, 1, 640, 480]) torch.Size([1, 1, 640, 480])
+pause
+Scene v_apprentices, pair:1-6 matches:1768
+Corner dist:0.51 inliers:1549
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_adam, pair:1-2 matches:2682
+Corner dist:1.77 inliers:2365
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_adam, pair:1-3 matches:2259
+Corner dist:2.21 inliers:1641
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_adam, pair:1-4 matches:1409
+Corner dist:2.18 inliers:1042
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_adam, pair:1-5 matches:1942
+Corner dist:2.16 inliers:1616
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_adam, pair:1-6 matches:1969
+Corner dist:1.56 inliers:1543
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_abstract, pair:1-2 matches:3740
+Corner dist:0.29 inliers:3570
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_abstract, pair:1-3 matches:3424
+Corner dist:0.51 inliers:3244
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_abstract, pair:1-4 matches:2411
+Corner dist:1.87 inliers:1827
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_abstract, pair:1-5 matches:2937
+Corner dist:0.90 inliers:2485
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene v_abstract, pair:1-6 matches:2224
+Corner dist:2.25 inliers:1754
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_zion, pair:1-2 matches:4055
+Corner dist:0.07 inliers:3923
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_zion, pair:1-3 matches:3758
+Corner dist:0.24 inliers:3397
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_zion, pair:1-4 matches:3569
+Corner dist:0.26 inliers:3029
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_zion, pair:1-5 matches:3429
+Corner dist:0.39 inliers:2724
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_zion, pair:1-6 matches:3290
+Corner dist:0.38 inliers:2759
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_yellowtent, pair:1-2 matches:3771
+Corner dist:0.11 inliers:3672
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_yellowtent, pair:1-3 matches:3553
+Corner dist:0.12 inliers:3243
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_yellowtent, pair:1-4 matches:3152
+Corner dist:0.17 inliers:2700
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_yellowtent, pair:1-5 matches:3241
+Corner dist:0.15 inliers:2827
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_yellowtent, pair:1-6 matches:3097
+Corner dist:0.22 inliers:2567
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_whitebuilding, pair:1-2 matches:4427
+Corner dist:0.03 inliers:4384
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_whitebuilding, pair:1-3 matches:4367
+Corner dist:0.03 inliers:4276
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_whitebuilding, pair:1-4 matches:4063
+Corner dist:0.10 inliers:3899
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_whitebuilding, pair:1-5 matches:4199
+Corner dist:0.09 inliers:4056
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_whitebuilding, pair:1-6 matches:4103
+Corner dist:0.05 inliers:3979
+torch.Size([1, 1, 480, 512]) torch.Size([1, 1, 480, 512])
+pause
+Scene i_village, pair:1-2 matches:3053
+Corner dist:0.25 inliers:2712
+torch.Size([1, 1, 480, 512]) torch.Size([1, 1, 480, 512])
+pause
+Scene i_village, pair:1-3 matches:3108
+Corner dist:0.13 inliers:2759
+torch.Size([1, 1, 480, 512]) torch.Size([1, 1, 480, 512])
+pause
+Scene i_village, pair:1-4 matches:3134
+Corner dist:0.14 inliers:2856
+torch.Size([1, 1, 480, 512]) torch.Size([1, 1, 480, 512])
+pause
+Scene i_village, pair:1-5 matches:3385
+Corner dist:0.13 inliers:3307
+torch.Size([1, 1, 480, 512]) torch.Size([1, 1, 480, 512])
+pause
+Scene i_village, pair:1-6 matches:3099
+Corner dist:0.20 inliers:2572
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_veggies, pair:1-2 matches:3822
+Corner dist:0.13 inliers:3743
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_veggies, pair:1-3 matches:3397
+Corner dist:0.16 inliers:2961
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_veggies, pair:1-4 matches:3619
+Corner dist:0.08 inliers:3446
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_veggies, pair:1-5 matches:3022
+Corner dist:0.19 inliers:2435
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_veggies, pair:1-6 matches:2837
+Corner dist:0.16 inliers:2152
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_troulos, pair:1-2 matches:3184
+Corner dist:0.62 inliers:2319
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_troulos, pair:1-3 matches:2424
+Corner dist:4.05 inliers:1440
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_troulos, pair:1-4 matches:2911
+Corner dist:0.13 inliers:2438
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_troulos, pair:1-5 matches:2813
+Corner dist:0.70 inliers:2004
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_troulos, pair:1-6 matches:2467
+Corner dist:1.53 inliers:2006
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_toy, pair:1-2 matches:3540
+Corner dist:0.04 inliers:3451
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_toy, pair:1-3 matches:3473
+Corner dist:0.09 inliers:3292
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_toy, pair:1-4 matches:3312
+Corner dist:0.15 inliers:2919
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_toy, pair:1-5 matches:2943
+Corner dist:0.23 inliers:2127
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_toy, pair:1-6 matches:2556
+Corner dist:0.74 inliers:1144
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_tools, pair:1-2 matches:2597
+Corner dist:0.72 inliers:1049
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_tools, pair:1-3 matches:3007
+Corner dist:2.62 inliers:1406
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_tools, pair:1-4 matches:2841
+Corner dist:6.86 inliers:795
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_tools, pair:1-5 matches:3534
+Corner dist:1.31 inliers:2434
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_tools, pair:1-6 matches:2619
+Corner dist:5.64 inliers:798
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_table, pair:1-2 matches:4587
+Corner dist:0.43 inliers:4092
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_table, pair:1-3 matches:4296
+Corner dist:0.43 inliers:3605
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_table, pair:1-4 matches:3936
+Corner dist:0.46 inliers:2952
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_table, pair:1-5 matches:3862
+Corner dist:0.40 inliers:2619
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_table, pair:1-6 matches:4821
+Corner dist:0.07 inliers:4593
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_steps, pair:1-2 matches:4798
+Corner dist:0.07 inliers:4637
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_steps, pair:1-3 matches:4779
+Corner dist:0.11 inliers:4509
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_steps, pair:1-4 matches:4671
+Corner dist:0.07 inliers:4554
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_steps, pair:1-5 matches:4061
+Corner dist:0.62 inliers:3855
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_steps, pair:1-6 matches:4418
+Corner dist:0.49 inliers:4314
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_smurf, pair:1-2 matches:4229
+Corner dist:0.09 inliers:3911
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_smurf, pair:1-3 matches:4252
+Corner dist:0.07 inliers:4009
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_smurf, pair:1-4 matches:4187
+Corner dist:0.10 inliers:3887
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_smurf, pair:1-5 matches:4031
+Corner dist:0.10 inliers:3674
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_smurf, pair:1-6 matches:3722
+Corner dist:0.14 inliers:3077
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ski, pair:1-2 matches:3416
+Corner dist:0.07 inliers:3358
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ski, pair:1-3 matches:3359
+Corner dist:0.08 inliers:3247
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ski, pair:1-4 matches:3247
+Corner dist:0.14 inliers:3077
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ski, pair:1-5 matches:3202
+Corner dist:0.12 inliers:2959
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ski, pair:1-6 matches:3077
+Corner dist:0.14 inliers:2744
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_school, pair:1-2 matches:4303
+Corner dist:0.03 inliers:4077
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_school, pair:1-3 matches:4294
+Corner dist:0.03 inliers:4104
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_school, pair:1-4 matches:3942
+Corner dist:0.27 inliers:3421
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_school, pair:1-5 matches:4099
+Corner dist:0.36 inliers:3754
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_school, pair:1-6 matches:3604
+Corner dist:1.35 inliers:2288
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_santuario, pair:1-2 matches:4728
+Corner dist:1.59 inliers:3968
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_santuario, pair:1-3 matches:4683
+Corner dist:1.71 inliers:3939
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_santuario, pair:1-4 matches:4393
+Corner dist:1.86 inliers:3288
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_santuario, pair:1-5 matches:4795
+Corner dist:0.20 inliers:4065
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_santuario, pair:1-6 matches:4448
+Corner dist:1.28 inliers:3041
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_salon, pair:1-2 matches:4309
+Corner dist:0.11 inliers:4122
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_salon, pair:1-3 matches:4017
+Corner dist:0.15 inliers:3597
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_salon, pair:1-4 matches:3661
+Corner dist:0.23 inliers:3031
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_salon, pair:1-5 matches:4036
+Corner dist:0.17 inliers:3722
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_salon, pair:1-6 matches:3853
+Corner dist:0.21 inliers:3322
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_resort, pair:1-2 matches:4096
+Corner dist:0.11 inliers:4003
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_resort, pair:1-3 matches:4269
+Corner dist:0.01 inliers:4251
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_resort, pair:1-4 matches:4244
+Corner dist:0.03 inliers:4220
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_resort, pair:1-5 matches:4080
+Corner dist:0.11 inliers:3969
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_resort, pair:1-6 matches:4199
+Corner dist:0.31 inliers:4140
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_porta, pair:1-2 matches:3879
+Corner dist:0.17 inliers:2505
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_porta, pair:1-3 matches:3889
+Corner dist:0.25 inliers:2563
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_porta, pair:1-4 matches:3377
+Corner dist:0.26 inliers:1968
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_porta, pair:1-5 matches:3095
+Corner dist:0.28 inliers:2097
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_porta, pair:1-6 matches:2932
+Corner dist:0.27 inliers:1541
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_pool, pair:1-2 matches:3110
+Corner dist:0.19 inliers:2055
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_pool, pair:1-3 matches:1835
+Corner dist:0.27 inliers:877
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_pool, pair:1-4 matches:1856
+Corner dist:1.94 inliers:711
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_pool, pair:1-5 matches:2381
+Corner dist:0.21 inliers:1301
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_pool, pair:1-6 matches:2316
+Corner dist:0.31 inliers:1291
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_pinard, pair:1-2 matches:2862
+Corner dist:0.18 inliers:2706
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_pinard, pair:1-3 matches:2378
+Corner dist:0.24 inliers:1859
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_pinard, pair:1-4 matches:2400
+Corner dist:0.23 inliers:1887
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_pinard, pair:1-5 matches:2487
+Corner dist:0.21 inliers:2049
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_pinard, pair:1-6 matches:2496
+Corner dist:0.10 inliers:2164
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_pencils, pair:1-2 matches:4119
+Corner dist:0.16 inliers:3125
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_pencils, pair:1-3 matches:3367
+Corner dist:4.81 inliers:1048
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_pencils, pair:1-4 matches:3317
+Corner dist:6.38 inliers:1443
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_pencils, pair:1-5 matches:3636
+Corner dist:1.42 inliers:1854
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_pencils, pair:1-6 matches:3777
+Corner dist:0.62 inliers:2450
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_partyfood, pair:1-2 matches:2118
+Corner dist:0.04 inliers:2115
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_partyfood, pair:1-3 matches:2159
+Corner dist:0.12 inliers:2139
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_partyfood, pair:1-4 matches:2168
+Corner dist:0.21 inliers:2110
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_partyfood, pair:1-5 matches:2077
+Corner dist:0.27 inliers:2000
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_partyfood, pair:1-6 matches:1959
+Corner dist:0.28 inliers:1835
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_parking, pair:1-2 matches:4812
+Corner dist:0.13 inliers:4388
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_parking, pair:1-3 matches:4553
+Corner dist:0.15 inliers:4066
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_parking, pair:1-4 matches:4117
+Corner dist:1.46 inliers:2657
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_parking, pair:1-5 matches:3897
+Corner dist:1.35 inliers:2612
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_parking, pair:1-6 matches:4200
+Corner dist:1.48 inliers:2607
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_objects, pair:1-2 matches:4587
+Corner dist:0.43 inliers:4092
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_objects, pair:1-3 matches:4296
+Corner dist:0.43 inliers:3605
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_objects, pair:1-4 matches:3936
+Corner dist:0.46 inliers:2952
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_objects, pair:1-5 matches:3862
+Corner dist:0.40 inliers:2619
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_objects, pair:1-6 matches:4821
+Corner dist:0.07 inliers:4593
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_nuts, pair:1-2 matches:3007
+Corner dist:0.20 inliers:2162
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_nuts, pair:1-3 matches:2634
+Corner dist:0.18 inliers:1696
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_nuts, pair:1-4 matches:2399
+Corner dist:0.23 inliers:1345
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_nuts, pair:1-5 matches:2409
+Corner dist:0.25 inliers:1179
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_nuts, pair:1-6 matches:2340
+Corner dist:0.94 inliers:880
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_nijmegen, pair:1-2 matches:3994
+Corner dist:0.80 inliers:3695
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_nijmegen, pair:1-3 matches:4301
+Corner dist:0.41 inliers:4099
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_nijmegen, pair:1-4 matches:3599
+Corner dist:0.26 inliers:2966
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_nijmegen, pair:1-5 matches:4281
+Corner dist:0.40 inliers:4052
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_nijmegen, pair:1-6 matches:4205
+Corner dist:0.34 inliers:3981
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_nescafe, pair:1-2 matches:3291
+Corner dist:0.08 inliers:2881
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_nescafe, pair:1-3 matches:3501
+Corner dist:0.12 inliers:3122
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_nescafe, pair:1-4 matches:3608
+Corner dist:0.11 inliers:3297
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_nescafe, pair:1-5 matches:3514
+Corner dist:0.13 inliers:3214
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_nescafe, pair:1-6 matches:3369
+Corner dist:0.15 inliers:2881
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_miniature, pair:1-2 matches:3542
+Corner dist:0.14 inliers:3406
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_miniature, pair:1-3 matches:3156
+Corner dist:0.21 inliers:2850
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_miniature, pair:1-4 matches:2733
+Corner dist:0.28 inliers:2168
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_miniature, pair:1-5 matches:2355
+Corner dist:0.32 inliers:1555
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_miniature, pair:1-6 matches:3136
+Corner dist:0.16 inliers:2795
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_melon, pair:1-2 matches:2870
+Corner dist:0.12 inliers:2773
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_melon, pair:1-3 matches:2616
+Corner dist:0.12 inliers:2335
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_melon, pair:1-4 matches:1961
+Corner dist:0.21 inliers:1436
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_melon, pair:1-5 matches:2582
+Corner dist:0.07 inliers:2334
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_melon, pair:1-6 matches:2444
+Corner dist:0.13 inliers:2137
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_londonbridge, pair:1-2 matches:3518
+Corner dist:1.51 inliers:3440
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_londonbridge, pair:1-3 matches:3453
+Corner dist:1.18 inliers:3379
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_londonbridge, pair:1-4 matches:3093
+Corner dist:2.96 inliers:2623
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_londonbridge, pair:1-5 matches:2451
+Corner dist:5.83 inliers:924
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_londonbridge, pair:1-6 matches:3317
+Corner dist:0.33 inliers:3194
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_lionnight, pair:1-2 matches:3613
+Corner dist:1.07 inliers:3249
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_lionnight, pair:1-3 matches:3171
+Corner dist:1.65 inliers:2736
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_lionnight, pair:1-4 matches:3618
+Corner dist:0.68 inliers:3418
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_lionnight, pair:1-5 matches:3487
+Corner dist:0.82 inliers:3212
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_lionnight, pair:1-6 matches:3650
+Corner dist:1.33 inliers:3268
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_lionday, pair:1-2 matches:3097
+Corner dist:2.02 inliers:1981
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_lionday, pair:1-3 matches:3306
+Corner dist:0.85 inliers:2810
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_lionday, pair:1-4 matches:2735
+Corner dist:1.63 inliers:1458
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_lionday, pair:1-5 matches:2952
+Corner dist:1.53 inliers:2064
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_lionday, pair:1-6 matches:3111
+Corner dist:1.23 inliers:2463
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_leuven, pair:1-2 matches:3600
+Corner dist:2.33 inliers:2553
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_leuven, pair:1-3 matches:4398
+Corner dist:2.46 inliers:4186
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_leuven, pair:1-4 matches:3276
+Corner dist:2.78 inliers:2308
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_leuven, pair:1-5 matches:3314
+Corner dist:1.83 inliers:2543
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_leuven, pair:1-6 matches:3328
+Corner dist:10.61 inliers:2748
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_kurhaus, pair:1-2 matches:4390
+Corner dist:0.03 inliers:4209
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_kurhaus, pair:1-3 matches:4167
+Corner dist:0.04 inliers:3798
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_kurhaus, pair:1-4 matches:4092
+Corner dist:0.05 inliers:3611
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_kurhaus, pair:1-5 matches:4027
+Corner dist:0.04 inliers:3412
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_kurhaus, pair:1-6 matches:3992
+Corner dist:0.07 inliers:3343
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ktirio, pair:1-2 matches:4327
+Corner dist:0.06 inliers:4188
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ktirio, pair:1-3 matches:4091
+Corner dist:0.16 inliers:3724
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ktirio, pair:1-4 matches:3461
+Corner dist:0.40 inliers:2629
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ktirio, pair:1-5 matches:3873
+Corner dist:0.28 inliers:3408
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ktirio, pair:1-6 matches:3401
+Corner dist:0.33 inliers:2547
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_kions, pair:1-2 matches:3463
+Corner dist:1.05 inliers:2834
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_kions, pair:1-3 matches:3435
+Corner dist:0.23 inliers:2617
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_kions, pair:1-4 matches:3442
+Corner dist:0.96 inliers:2026
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_kions, pair:1-5 matches:3427
+Corner dist:1.07 inliers:2183
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_kions, pair:1-6 matches:3505
+Corner dist:0.24 inliers:2465
+torch.Size([1, 1, 480, 864]) torch.Size([1, 1, 480, 864])
+pause
+Scene i_indiana, pair:1-2 matches:5530
+Corner dist:0.11 inliers:4875
+torch.Size([1, 1, 480, 864]) torch.Size([1, 1, 480, 864])
+pause
+Scene i_indiana, pair:1-3 matches:5448
+Corner dist:0.11 inliers:4599
+torch.Size([1, 1, 480, 864]) torch.Size([1, 1, 480, 864])
+pause
+Scene i_indiana, pair:1-4 matches:5341
+Corner dist:0.15 inliers:4456
+torch.Size([1, 1, 480, 864]) torch.Size([1, 1, 480, 864])
+pause
+Scene i_indiana, pair:1-5 matches:5244
+Corner dist:0.18 inliers:4311
+torch.Size([1, 1, 480, 864]) torch.Size([1, 1, 480, 864])
+pause
+Scene i_indiana, pair:1-6 matches:5233
+Corner dist:0.19 inliers:4252
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_greentea, pair:1-2 matches:3125
+Corner dist:0.06 inliers:2782
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_greentea, pair:1-3 matches:3459
+Corner dist:0.08 inliers:3302
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_greentea, pair:1-4 matches:3516
+Corner dist:0.09 inliers:3416
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_greentea, pair:1-5 matches:3521
+Corner dist:0.12 inliers:3432
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_greentea, pair:1-6 matches:3461
+Corner dist:0.06 inliers:3318
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_greenhouse, pair:1-2 matches:4373
+Corner dist:0.07 inliers:4131
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_greenhouse, pair:1-3 matches:4316
+Corner dist:0.10 inliers:3992
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_greenhouse, pair:1-4 matches:4261
+Corner dist:0.10 inliers:3858
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_greenhouse, pair:1-5 matches:4200
+Corner dist:0.27 inliers:3685
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_greenhouse, pair:1-6 matches:4043
+Corner dist:0.49 inliers:3375
+torch.Size([1, 1, 480, 768]) torch.Size([1, 1, 480, 768])
+pause
+Scene i_gonnenberg, pair:1-2 matches:3938
+Corner dist:0.07 inliers:3727
+torch.Size([1, 1, 480, 768]) torch.Size([1, 1, 480, 768])
+pause
+Scene i_gonnenberg, pair:1-3 matches:3937
+Corner dist:0.06 inliers:3709
+torch.Size([1, 1, 480, 768]) torch.Size([1, 1, 480, 768])
+pause
+Scene i_gonnenberg, pair:1-4 matches:3827
+Corner dist:0.20 inliers:3554
+torch.Size([1, 1, 480, 768]) torch.Size([1, 1, 480, 768])
+pause
+Scene i_gonnenberg, pair:1-5 matches:3866
+Corner dist:0.09 inliers:3662
+torch.Size([1, 1, 480, 768]) torch.Size([1, 1, 480, 768])
+pause
+Scene i_gonnenberg, pair:1-6 matches:3922
+Corner dist:0.14 inliers:3729
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_fruits, pair:1-2 matches:3109
+Corner dist:0.18 inliers:2686
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_fruits, pair:1-3 matches:3044
+Corner dist:0.14 inliers:2542
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_fruits, pair:1-4 matches:2954
+Corner dist:0.13 inliers:2482
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_fruits, pair:1-5 matches:2856
+Corner dist:0.14 inliers:2444
+torch.Size([1, 1, 480, 480]) torch.Size([1, 1, 480, 480])
+pause
+Scene i_fruits, pair:1-6 matches:2914
+Corner dist:0.30 inliers:2480
+torch.Size([1, 1, 480, 800]) torch.Size([1, 1, 480, 800])
+pause
+Scene i_fog, pair:1-2 matches:5732
+Corner dist:0.08 inliers:5464
+torch.Size([1, 1, 480, 800]) torch.Size([1, 1, 480, 800])
+pause
+Scene i_fog, pair:1-3 matches:5496
+Corner dist:0.07 inliers:5058
+torch.Size([1, 1, 480, 800]) torch.Size([1, 1, 480, 800])
+pause
+Scene i_fog, pair:1-4 matches:5469
+Corner dist:0.11 inliers:4975
+torch.Size([1, 1, 480, 800]) torch.Size([1, 1, 480, 800])
+pause
+Scene i_fog, pair:1-5 matches:4787
+Corner dist:0.25 inliers:3810
+torch.Size([1, 1, 480, 800]) torch.Size([1, 1, 480, 800])
+pause
+Scene i_fog, pair:1-6 matches:4871
+Corner dist:0.32 inliers:3959
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_fenis, pair:1-2 matches:4402
+Corner dist:0.06 inliers:4294
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_fenis, pair:1-3 matches:4192
+Corner dist:0.13 inliers:3895
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_fenis, pair:1-4 matches:3253
+Corner dist:0.53 inliers:2144
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_fenis, pair:1-5 matches:3185
+Corner dist:1.27 inliers:1558
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_fenis, pair:1-6 matches:3392
+Corner dist:0.23 inliers:2335
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_duda, pair:1-2 matches:2961
+Corner dist:0.06 inliers:2957
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_duda, pair:1-3 matches:2998
+Corner dist:0.11 inliers:2978
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_duda, pair:1-4 matches:2922
+Corner dist:0.12 inliers:2845
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_duda, pair:1-5 matches:2831
+Corner dist:0.14 inliers:2733
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_duda, pair:1-6 matches:2425
+Corner dist:0.27 inliers:2227
+torch.Size([1, 1, 480, 672]) torch.Size([1, 1, 480, 672])
+pause
+Scene i_dome, pair:1-2 matches:3925
+Corner dist:0.03 inliers:3835
+torch.Size([1, 1, 480, 672]) torch.Size([1, 1, 480, 672])
+pause
+Scene i_dome, pair:1-3 matches:2908
+Corner dist:0.18 inliers:2243
+torch.Size([1, 1, 480, 672]) torch.Size([1, 1, 480, 672])
+pause
+Scene i_dome, pair:1-4 matches:2954
+Corner dist:0.15 inliers:2279
+torch.Size([1, 1, 480, 672]) torch.Size([1, 1, 480, 672])
+pause
+Scene i_dome, pair:1-5 matches:3001
+Corner dist:0.25 inliers:2370
+torch.Size([1, 1, 480, 672]) torch.Size([1, 1, 480, 672])
+pause
+Scene i_dome, pair:1-6 matches:3667
+Corner dist:0.15 inliers:3332
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_dc, pair:1-2 matches:3981
+Corner dist:0.12 inliers:3560
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_dc, pair:1-3 matches:4013
+Corner dist:0.12 inliers:3556
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_dc, pair:1-4 matches:3980
+Corner dist:0.16 inliers:3431
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_dc, pair:1-5 matches:4020
+Corner dist:0.24 inliers:3422
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_dc, pair:1-6 matches:4032
+Corner dist:0.25 inliers:3460
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_crownnight, pair:1-2 matches:4730
+Corner dist:0.10 inliers:4230
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_crownnight, pair:1-3 matches:4703
+Corner dist:0.16 inliers:4147
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_crownnight, pair:1-4 matches:4679
+Corner dist:0.13 inliers:4121
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_crownnight, pair:1-5 matches:4383
+Corner dist:0.13 inliers:3636
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_crownnight, pair:1-6 matches:2935
+Corner dist:0.35 inliers:1381
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_crownday, pair:1-2 matches:3849
+Corner dist:0.22 inliers:3148
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_crownday, pair:1-3 matches:4126
+Corner dist:0.10 inliers:3644
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_crownday, pair:1-4 matches:4227
+Corner dist:0.13 inliers:3825
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_crownday, pair:1-5 matches:4437
+Corner dist:0.05 inliers:4204
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_crownday, pair:1-6 matches:3818
+Corner dist:0.28 inliers:3103
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_contruction, pair:1-2 matches:4702
+Corner dist:0.10 inliers:4601
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_contruction, pair:1-3 matches:4629
+Corner dist:0.15 inliers:4450
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_contruction, pair:1-4 matches:4129
+Corner dist:0.15 inliers:3871
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_contruction, pair:1-5 matches:3474
+Corner dist:0.11 inliers:3067
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_contruction, pair:1-6 matches:3219
+Corner dist:0.09 inliers:2574
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_chestnuts, pair:1-2 matches:3286
+Corner dist:0.03 inliers:3088
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_chestnuts, pair:1-3 matches:3255
+Corner dist:0.06 inliers:3036
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_chestnuts, pair:1-4 matches:3209
+Corner dist:0.16 inliers:2954
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_chestnuts, pair:1-5 matches:3105
+Corner dist:0.10 inliers:2866
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_chestnuts, pair:1-6 matches:2928
+Corner dist:0.13 inliers:2577
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_castle, pair:1-2 matches:2865
+Corner dist:0.12 inliers:2185
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_castle, pair:1-3 matches:3057
+Corner dist:0.12 inliers:2537
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_castle, pair:1-4 matches:2691
+Corner dist:0.43 inliers:2375
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_castle, pair:1-5 matches:2524
+Corner dist:0.28 inliers:1724
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_castle, pair:1-6 matches:2940
+Corner dist:0.22 inliers:1851
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_brooklyn, pair:1-2 matches:4249
+Corner dist:0.10 inliers:3597
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_brooklyn, pair:1-3 matches:4469
+Corner dist:1.92 inliers:4194
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_brooklyn, pair:1-4 matches:4068
+Corner dist:1.84 inliers:2404
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_brooklyn, pair:1-5 matches:4406
+Corner dist:1.95 inliers:4032
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_brooklyn, pair:1-6 matches:4081
+Corner dist:1.87 inliers:3494
+torch.Size([1, 1, 480, 864]) torch.Size([1, 1, 480, 864])
+pause
+Scene i_bridger, pair:1-2 matches:6072
+Corner dist:0.08 inliers:5675
+torch.Size([1, 1, 480, 864]) torch.Size([1, 1, 480, 864])
+pause
+Scene i_bridger, pair:1-3 matches:5796
+Corner dist:0.12 inliers:5146
+torch.Size([1, 1, 480, 864]) torch.Size([1, 1, 480, 864])
+pause
+Scene i_bridger, pair:1-4 matches:6011
+Corner dist:0.08 inliers:5572
+torch.Size([1, 1, 480, 864]) torch.Size([1, 1, 480, 864])
+pause
+Scene i_bridger, pair:1-5 matches:5753
+Corner dist:0.18 inliers:4996
+torch.Size([1, 1, 480, 864]) torch.Size([1, 1, 480, 864])
+pause
+Scene i_bridger, pair:1-6 matches:4474
+Corner dist:0.32 inliers:2596
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_boutique, pair:1-2 matches:3935
+Corner dist:0.10 inliers:3637
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_boutique, pair:1-3 matches:3916
+Corner dist:0.21 inliers:3521
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_boutique, pair:1-4 matches:3933
+Corner dist:0.14 inliers:3499
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_boutique, pair:1-5 matches:3317
+Corner dist:0.57 inliers:2355
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_boutique, pair:1-6 matches:3239
+Corner dist:0.28 inliers:2375
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_books, pair:1-2 matches:2854
+Corner dist:0.10 inliers:2722
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_books, pair:1-3 matches:3019
+Corner dist:0.10 inliers:2784
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_books, pair:1-4 matches:3059
+Corner dist:0.09 inliers:2848
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_books, pair:1-5 matches:3047
+Corner dist:0.06 inliers:2923
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_books, pair:1-6 matches:2761
+Corner dist:0.16 inliers:2524
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_bologna, pair:1-2 matches:2672
+Corner dist:0.11 inliers:2648
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_bologna, pair:1-3 matches:2597
+Corner dist:0.08 inliers:2513
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_bologna, pair:1-4 matches:2527
+Corner dist:0.09 inliers:2411
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_bologna, pair:1-5 matches:2482
+Corner dist:0.14 inliers:2301
+torch.Size([1, 1, 480, 736]) torch.Size([1, 1, 480, 736])
+pause
+Scene i_bologna, pair:1-6 matches:2478
+Corner dist:0.15 inliers:2308
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_autannes, pair:1-2 matches:4012
+Corner dist:0.05 inliers:3888
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_autannes, pair:1-3 matches:3985
+Corner dist:0.02 inliers:3777
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_autannes, pair:1-4 matches:3341
+Corner dist:1.40 inliers:2399
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_autannes, pair:1-5 matches:3302
+Corner dist:0.22 inliers:2507
+torch.Size([1, 1, 480, 704]) torch.Size([1, 1, 480, 704])
+pause
+Scene i_autannes, pair:1-6 matches:3715
+Corner dist:0.15 inliers:3277
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ajuntament, pair:1-2 matches:4511
+Corner dist:0.25 inliers:4224
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ajuntament, pair:1-3 matches:3820
+Corner dist:0.64 inliers:2782
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ajuntament, pair:1-4 matches:3297
+Corner dist:0.93 inliers:1522
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ajuntament, pair:1-5 matches:3299
+Corner dist:0.48 inliers:1881
+torch.Size([1, 1, 480, 640]) torch.Size([1, 1, 480, 640])
+pause
+Scene i_ajuntament, pair:1-6 matches:3401
+Corner dist:0.48 inliers:1807
+>>Finished, pairs=580 match_failed=0 matches=2982.0 match_time=0.44s
+==== Homography Estimation ====
+Hest solver=cv est_failed=0 ransac_thres=3 inlier_rate=0.78
+Hest Correct: a=[0.6207 0.8638 0.9034 0.9517]
+i=[0.8526 0.9754 0.9825 0.9965]
+v=[0.3966 0.7559 0.8271 0.9085]
+Hest AUC: a=[0.4234 0.6558 0.7492 0.843 ]
+i=[0.6757 0.8489 0.901  0.9474]
+v=[0.1813 0.471  0.6041 0.7432]
+

@@ -5,8 +5,9 @@ import cv2
 
 from model.loftr_src.loftr.utils.cvpr_ds_config import default_cfg
 from model.full_model import GeoFormer as GeoFormer_
-
+from model.geo_config import lower_config
 from eval_tool.immatch.utils.data_io import load_gray_scale_tensor_cv
+from eval_tool.immatch.utils.misc import load_im_padding
 from model.geo_config import default_cfg as geoformer_cfg
 
 class GeoFormer():
@@ -38,10 +39,12 @@ class GeoFormer():
     def change_deivce(self, device):
         self.device = device
         self.model.to(device)
-    def load_im(self, im_path, enhanced=False):
+
+    def load_im(self, im1_path, enhanced=False):
         return load_gray_scale_tensor_cv(
-            im_path, self.device, imsize=self.imsize, dfactor=8, enhanced=enhanced, value_to_scale=min
+            im1_path, self.device, imsize=self.imsize, dfactor=8, enhanced=enhanced, value_to_scale=min
         )
+
 
     def match_inputs_(self, gray1, gray2, is_draw=False):
 
@@ -50,7 +53,7 @@ class GeoFormer():
             batch = self.model(batch)
         kpts1 = batch['mkpts0_f'].cpu().numpy()
         kpts2 = batch['mkpts1_f'].cpu().numpy()
-        def draw():
+        def draw(save_path):
             import matplotlib.pyplot as plt
             import cv2
             import numpy as np
@@ -68,8 +71,9 @@ class GeoFormer():
                                    None)
             plt.imshow(show)
             plt.show()
+            plt.savefig(save_path)
         if is_draw:
-            draw()
+            draw('output_image_nms5.png')
         scores = batch['mconf'].cpu().numpy()
         matches = np.concatenate([kpts1, kpts2], axis=1)
         return matches, kpts1, kpts2, scores
@@ -79,8 +83,15 @@ class GeoFormer():
         tmp_device = self.device
         if cpu:
             self.change_deivce('cpu')
+
         gray1, sc1 = self.load_im(im1_path)
         gray2, sc2 = self.load_im(im2_path)
+        # ori_rgb1, ori_rgb2, rgb1, rgb2, mask1, mask2, sc1, sc2 = load_im_padding(im1_path, im2_path)
+
+        # print(gray1.shape)
+        # print(gray2.shape)
+        # print(rgb1.shape)
+        # print(rgb2.shape)
 
         upscale = np.array([sc1 + sc2])
         matches, kpts1, kpts2, scores = self.match_inputs_(gray1, gray2, is_draw)
@@ -92,11 +103,51 @@ class GeoFormer():
         matches = upscale * matches
         kpts1 = sc1 * kpts1
         kpts2 = sc2 * kpts2
+        print(len(matches))
 
         if cpu:
             self.change_deivce(tmp_device)
 
+        # def _np_to_cv2_kpts(np_kpts):
+        #     cv2_kpts = []
+        #     for np_kpt in np_kpts:
+        #         cur_cv2_kpt = cv2.KeyPoint()
+        #         cur_cv2_kpt.pt = tuple(np_kpt)
+        #         cv2_kpts.append(cur_cv2_kpt)
+        #     return cv2_kpts
+        # def draw(save_path):
+        #     import cv2
+        #     query_kpts, ref_kpts = _np_to_cv2_kpts(kpts1), _np_to_cv2_kpts(kpts2)
+        #     matched_image = cv2.drawMatches(
+        #         ori_rgb1,
+        #         query_kpts,
+        #         ori_rgb2,
+        #         ref_kpts,
+        #         [
+        #             cv2.DMatch(_queryIdx=idx, _trainIdx=idx, _distance=0)
+        #             for idx in range(len(query_kpts))
+        #         ],
+        #         None,
+        #         flags=2,
+        #     )
+        #     import matplotlib.pyplot as plt
+        #
+        #     import numpy as np
+        #     plt.imshow(matched_image)
+        #     plt.show()
+        #     plt.savefig(save_path)
+        # if is_draw:
+        #     draw('output_image_nms5.png')
         return matches, kpts1, kpts2, scores
+def get_args():
+    import argparse
+    parser = argparse.ArgumentParser("test feature matching")
+    parser.add_argument("--NMS", default=False, action='store_true')
+    return parser.parse_args()
 
+args = get_args()
+conf = dict(default_cfg)
+conf['match_coarse']['method'] = 'maxpool_nms' if args.NMS else None
+conf['match_coarse']['window_size'] = 1 if args.NMS else None
 g = GeoFormer(640, 0.2, no_match_upscale=False, ckpt='saved_ckpt/geoformer.ckpt', device='cuda')
-g.match_pairs('/data3/ljz/matching/data/datasets/copy/query/106_2.jpg', '/data3/ljz/matching/data/datasets/copy/refer/106_1.jpg', is_draw=True)
+g.match_pairs('/data/lyh/code/CasMTR/assets/demo_imgs/output1.jpg', '/data/lyh/code/CasMTR/assets/demo_imgs/output2.jpg', is_draw=True)

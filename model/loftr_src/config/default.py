@@ -21,6 +21,8 @@ _CN.LOFTR.COARSE.NHEAD = 8
 _CN.LOFTR.COARSE.LAYER_NAMES = ['self', 'cross'] * 4
 _CN.LOFTR.COARSE.ATTENTION = 'linear'  # options: ['linear', 'full']
 _CN.LOFTR.COARSE.TEMP_BUG_FIX = False
+# _CN.LOFTR.COARSE.BLOCK_TYPE = 'loftr'
+_CN.LOFTR.COARSE.BLOCK_TYPE = 'mamba'
 
 # 3. Coarse-Matching loftr_config
 _CN.LOFTR.MATCH_COARSE = CN()
@@ -42,7 +44,7 @@ _CN.LOFTR.FINE.D_FFN = 128
 _CN.LOFTR.FINE.NHEAD = 8
 _CN.LOFTR.FINE.LAYER_NAMES = ['self', 'cross'] * 1
 _CN.LOFTR.FINE.ATTENTION = 'linear'
-
+_CN.LOFTR.FINE.BLOCK_TYPE = 'loftr'
 # 5. LoFTR Losses
 # -- # coarse-level
 _CN.LOFTR.LOSS = CN()

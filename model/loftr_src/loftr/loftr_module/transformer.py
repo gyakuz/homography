@@ -1,10 +1,25 @@
 import copy
 from typing import Optional
-
+from mamba_ssm.modules.mamba_simple import Mamba
 import torch
 import torch.nn as nn
 from .linear_attention import LinearAttention, FullAttention
+from .vmamba import VSSBlock
+from einops import rearrange
+import math
 
+class TokenDownLayer(nn.Module):
+    def __init__(self, shape1,shape2) -> None:
+        super().__init__()
+        self.dwn = nn.Sequential(
+            nn.AdaptiveAvgPool2d((shape1,shape2))
+        )
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        
+        x = self.dwn(x)
+
+        return x
 
 class LoFTREncoderLayer(nn.Module):
     def __init__(self,
@@ -65,14 +80,28 @@ class LocalFeatureTransformer(nn.Module):
 
     def __init__(self, config):
         super(LocalFeatureTransformer, self).__init__()
-
+        self.block_type = config['block_type']
         self.config = config
         self.d_model = config['d_model']
         self.nhead = config['nhead']
         self.layer_names = config['layer_names']
-        encoder_layer = LoFTREncoderLayer(config['d_model'], config['nhead'], config['attention'])
-        self.layers = nn.ModuleList([copy.deepcopy(encoder_layer) for _ in range(len(self.layer_names))])
-        self._reset_parameters()
+        self.config['block_type'] = config['block_type']
+        
+        if config['block_type'] == 'loftr':
+            encoder_layer = LoFTREncoderLayer(config['d_model'], config['nhead'], config['attention'])
+            self.layers = nn.ModuleList([copy.deepcopy(encoder_layer) for _ in range(len(self.layer_names))])
+            self._reset_parameters()
+        elif config['block_type'] == 'mamba':
+            dpr = [x.item() for x in torch.linspace(0, 0.1, 8)]
+            # encoder_layer = VSSBlock(
+            #                     hidden_dim=256, 
+            #                     drop_path=0.1,)
+            self.layers = nn.ModuleList([copy.deepcopy(VSSBlock(
+                                hidden_dim=256, 
+                                d_model = config['d_model'],nhead = config['nhead'],
+                                drop_path=dpr[i],)) for i in range(len(self.layer_names))])
+
+
 
     def _reset_parameters(self):
         for p in self.parameters():
@@ -87,18 +116,55 @@ class LocalFeatureTransformer(nn.Module):
             mask0 (torch.Tensor): [N, L] (optional)
             mask1 (torch.Tensor): [N, S] (optional)
         """
+        
+        if len(feat0.shape) == 4 :
+            B, C, H1, W1 = feat0.shape
+            B, C, H2, W2 = feat1.shape
+            H = min(H1,H2)
+            W = min(W1,W2)
+            
+            # feat0 = rearrange(feat0, 'b c h w -> b (h w) c')
+            # feat1 = rearrange(feat1, 'b c h w -> b (h w) c')
+        else:
+            H0, W0, H1, W1 = 0, 0, 0, 0
 
-        assert self.d_model == feat0.size(2), "the feature number of src and transformer must be equal"
+        if self.block_type == 'loftr':
+            for layer, name in zip(self.layers, self.layer_names):
+                if name == 'self':
+                    feat0 = layer(feat0, feat0, mask0, mask0)
+                    feat1 = layer(feat1, feat1, mask1, mask1)
+                elif name == 'cross':
+                    feat0 = layer(feat0, feat1, mask0, mask1)
+                    feat1 = layer(feat1, feat0, mask1, mask0)
+                else:
+                    raise KeyError
+       
+        # elif self.block_type == 'mamba':
+        #     for layer, name in zip(self.layers, self.layer_names):
+        #         feat0=rearrange(feat0, 'b h w c-> b (h w) c')
+        #         feat1=rearrange(feat1, 'b h w c-> b (h w) c')
+        #         if name == 'self':
+        #             feat0 = layer(feat0, feat0, H1, W1, H1, W1)
+        #             feat1 = layer(feat1, feat1, H2, W2, H2, W2)
+        #         elif name == 'cross':
+        #             feat0 = layer(feat0, feat1, H1, W1, H2, W2)
+        #             feat1 = layer(feat1, feat0, H2, W2, H1, W1)
+        #     feat0 = rearrange(feat0, 'b h w c-> b (h w) c')
+        #     feat1 = rearrange(feat1, 'b h w c-> b (h w) c')
+        elif self.block_type == 'mamba':
+            pool = nn.AdaptiveAvgPool2d((H, W))  
+            feat0 = pool(feat0)  
+            feat1 = pool(feat1)  
 
-        for s, layer in enumerate(self.layers):
-            name = self.layer_names[s]
-            if name == 'self':
-                feat0 = layer(feat0, feat0, mask0, mask0)
-                feat1 = layer(feat1, feat1, mask1, mask1)
-            elif name == 'cross':
-                feat0 = layer(feat0, feat1, mask0, mask1)
-                feat1 = layer(feat1, feat0, mask1, mask0)
-            else:
-                raise KeyError
-
+            X=rearrange(X, 'b c h w -> b h w c')
+            k=rearrange(k, 'b c h w -> b h w c')
+            for layer, name in zip(self.layers, self.layer_names):
+                if name == 'self':
+                    feat0 = layer(feat0, feat0, H, W)
+                    feat1 = layer(feat1, feat1, H, W)
+                elif name == 'cross':
+                    feat0 = layer(feat0, feat1, H, W)
+                    feat1 = layer(feat1, feat0, H, W)
+            feat0 = rearrange(feat0, 'b h w c-> b (h w) c')
+            feat1 = rearrange(feat1, 'b h w c-> b (h w) c')
         return feat0, feat1

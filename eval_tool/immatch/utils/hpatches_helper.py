@@ -33,7 +33,7 @@ def cal_reproj_dists(p1s, p2s, homography):
     dist = np.sqrt(np.sum((p2s - p2s_proj) ** 2, axis=1))
     return dist
 
-def eval_summary_homography(dists_sa, dists_si, dists_sv, thres):
+def eval_summary_homography(dists_sa, dists_si, dists_sv, thres, lprint=print):
     correct_sa = np.mean(
         [[float(dist <= t) for t in thres] for dist in dists_sa], axis=0
     )
@@ -52,8 +52,8 @@ def eval_summary_homography(dists_sa, dists_si, dists_sv, thres):
     # Generate summary
     summary = f'Hest Correct: a={correct_sa}\ni={correct_si}\nv={correct_sv}\n'
     summary += f'Hest AUC: a={auc_sa}\ni={auc_si}\nv={auc_sv}\n'
-    print(summary)
-    return auc_sa[-1]
+    lprint(summary)
+    return auc_sa[-1], dict(auc_sa=auc_sa, auc_si=auc_si, auc_sv=auc_sv, summary=summary)
 
 def eval_summary_matching(results, thres=[1, 3, 5, 10], save_npy=None):
     np.set_printoptions(precision=4)
@@ -213,7 +213,8 @@ def eval_hpatches(
             if 'homography' in task:
                 try:
                     if 'cv' in h_solver:
-                        H_pred, inliers = cv2.findHomography(matches[:, :2], matches[:, 2:4], cv2.RANSAC, ransac_thres)
+                        # H_pred, inliers = cv2.findHomography(matches[:, :2], matches[:, 2:4], cv2.RANSAC, ransac_thres)
+                        H_pred, inliers = cv2.findHomography(matches[:, :2], matches[:, 2:4], cv2.RANSAC, ransac_thres, maxIters=8000, confidence=0.99995,)
                     else:
                         H_pred, inliers = pydegensac.findHomography(matches[:, :2], matches[:, 2:4], ransac_thres)
                 except:
@@ -314,5 +315,5 @@ def eval_hpatches(
     if 'homography' in task:
         lprint_('==== Homography Estimation ====')        
         lprint_(f'Hest solver={h_solver} est_failed={h_failed} ransac_thres={ransac_thres} inlier_rate={np.mean(inlier_ratio):.2f}')
-        eval_summary_homography(dists_sa, dists_si, dists_sv, thres)
+        eval_summary_homography(dists_sa, dists_si, dists_sv, thres, lprint=lprint_)
 
