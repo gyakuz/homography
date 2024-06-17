@@ -25,8 +25,8 @@ _CN.COARSE.D_FFN = 256
 _CN.COARSE.NHEAD = 8
 _CN.COARSE.LAYER_NAMES = ['self', 'cross'] * 4
 _CN.COARSE.ATTENTION = 'linear'  # options: ['linear', 'full']
-# _CN.COARSE.BLOCK_TYPE = 'loftr' 
-_CN.COARSE.BLOCK_TYPE = 'mamba' 
+_CN.COARSE.BLOCK_TYPE = 'loftr' 
+# _CN.COARSE.BLOCK_TYPE = 'mamba' 
 _CN.COARSE.TEMP_BUG_FIX = False
 
 # 3. Coarse-Matching loftr_config

@@ -118,13 +118,11 @@ class LocalFeatureTransformer(nn.Module):
         """
         
         if len(feat0.shape) == 4 :
-            B, C, H1, W1 = feat0.shape
-            B, C, H2, W2 = feat1.shape
-            H = min(H1,H2)
-            W = min(W1,W2)
+            B, C, H, W = feat0.shape
+
             
-            # feat0 = rearrange(feat0, 'b c h w -> b (h w) c')
-            # feat1 = rearrange(feat1, 'b c h w -> b (h w) c')
+            feat0 = rearrange(feat0, 'b c h w -> b (h w) c')
+            feat1 = rearrange(feat1, 'b c h w -> b (h w) c')
         else:
             H0, W0, H1, W1 = 0, 0, 0, 0
 
@@ -152,12 +150,10 @@ class LocalFeatureTransformer(nn.Module):
         #     feat0 = rearrange(feat0, 'b h w c-> b (h w) c')
         #     feat1 = rearrange(feat1, 'b h w c-> b (h w) c')
         elif self.block_type == 'mamba':
-            pool = nn.AdaptiveAvgPool2d((H, W))  
-            feat0 = pool(feat0)  
-            feat1 = pool(feat1)  
 
-            X=rearrange(X, 'b c h w -> b h w c')
-            k=rearrange(k, 'b c h w -> b h w c')
+
+            feat0=rearrange(feat0, 'b c h w -> b h w c')
+            feat1=rearrange(feat1, 'b c h w -> b h w c')
             for layer, name in zip(self.layers, self.layer_names):
                 if name == 'self':
                     feat0 = layer(feat0, feat0, H, W)

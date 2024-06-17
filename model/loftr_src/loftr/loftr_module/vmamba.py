@@ -1017,15 +1017,15 @@ class VSSBlock(nn.Module):
         norm_layer: nn.Module = nn.LayerNorm,
         channel_first=False,
         # =============================
-        ssm_d_state: int = 16,
+        ssm_d_state: int = 1,
         ssm_ratio: int = 2,
         ssm_dt_rank: Any = "auto",
         ssm_act_layer=nn.SiLU,
         ssm_conv: int = 3,
-        ssm_conv_bias=True,
+        ssm_conv_bias=False,
         ssm_drop_rate: float = 0,
         ssm_init="v0",
-        forward_type="v2",
+        forward_type="v05_noz",
         # =============================
         mlp_ratio=0.0,
         mlp_act_layer=nn.GELU,
@@ -1085,45 +1085,7 @@ class VSSBlock(nn.Module):
             mlp_hidden_dim = int(hidden_dim * mlp_ratio)
             self.mlp = _MLP(in_features=hidden_dim, hidden_features=mlp_hidden_dim, act_layer=mlp_act_layer, drop=mlp_drop_rate, channels_first=channel_first)
 
-    # def _forward(self, input1: torch.Tensor,input2: torch.Tensor ,H1, W1, H2, W2):
-    #     x = input1
-    #     k = input2
-    #     B, N, C = x.shape
-       
-    #     x = self.norm(x)
-    #     k = self.norm(k)
-    #     x = x.reshape(B, H1, W1, C)
-    #     k = k.reshape(B, H2, W2, C)
 
-    #     z = x.clone()
-
-    #     y = self.linear(x)
-    #     y = self.act(y)
-        
-    #     k1,k2=k,k.clone()
-    #     x = self.op(x)
-    #     k = self.op(k1)
-    #     v = self.op(k2)
-
-    #     x=rearrange(x, 'b h w c -> b (h w) c').view(B, -1, self.nhead, self.dim) 
-    #     k=rearrange(k, 'b h w c -> b (h w) c').view(B, -1, self.nhead, self.dim) 
-    #     v=rearrange(v, 'b h w c -> b (h w) c').view(B, -1, self.nhead, self.dim) 
-
-    #     x = self.feature_map(x)
-    #     k = self.feature_map(k)
-    #     v_length = v.size(1)
-    #     values = v / v_length
-    #     KV = torch.einsum("nshd,nshv->nhdv", k, values)
-    #     Z = 1 / (torch.einsum("nlhd,nhd->nlh", x, k.sum(dim=1)) + self.eps)
-    #     x = torch.einsum("nlhd,nhdv,nlh->nlhv", x, KV, Z) * v_length
-
-    #     x=rearrange(x, 'b (h w s) l d -> b h w (s l d)',h=H1,w=W1,s=2)
-        
-    #     x = y * x
-    #     out = self.dropout(self.out_proj(x))
-    #     out = z + out
-
-    #     return out
     def _forward(self, input1: torch.Tensor,input2: torch.Tensor ,H, W):
         x = input1
         k = input2
@@ -1132,12 +1094,9 @@ class VSSBlock(nn.Module):
         k = self.norm(k)
 
         z = x.clone()
-
-        y = self.linear(x)
-        y = self.act(y)
         
-        x = y * self.drop_path(self.op(x))
-        k = y * self.drop_path(self.op(k)) 
+        x = self.drop_path(self.op(x))
+        k = self.drop_path(self.op(k)) 
         
         x = x + k
         out = self.dropout(self.out_proj(x))
